@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('empleador', function (Blueprint $table) {
-            $table->id("id_empleador");
-            $table->string("nombre_empleador")->nullable();
-            $table->string("ruc")->nullable();
-            $table->string("id_ubigeo")->nullable();
-            $table->string("id_sector")->nullable();
+        Schema::create('test_categorias', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('slug');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('empleador');
+        Schema::dropIfExists('test_categorias');
     }
 };

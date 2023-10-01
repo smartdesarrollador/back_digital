@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TestApiController;
 
+use App\Http\Controllers\Test\Api\CrudController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('test_api',TestApiController::class);
+
+
+Route::apiResource('test_api_crud',CrudController::class);
