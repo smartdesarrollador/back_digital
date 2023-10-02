@@ -12,4 +12,14 @@ class test_categorias extends Model
     protected $table = 'test_categorias';
 
     protected $fillable = ['name', 'slug'];
+
+    // declarar el id
+    protected $primaryKey = 'id';
+
+   
+
+
+   
+
+
 }
