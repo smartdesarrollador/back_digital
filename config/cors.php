@@ -19,7 +19,8 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://www.iatecdigital.com', 'https://iatecdigital.com'],
+    /* 'allowed_origins' => ['https://www.iatecdigital.com', 'https://iatecdigital.com'], */
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
