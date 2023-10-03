@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('test_api',TestApiController::class);
+Route::apiResource('test_api', TestApiController::class);
 
 
-Route::apiResource('test_api_crud',CrudController::class);
+Route::apiResource('test_api_crud', CrudController::class)->middleware('cors');
