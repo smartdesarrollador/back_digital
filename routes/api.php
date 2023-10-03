@@ -24,5 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('test_api', TestApiController::class);
 
+/* crud basico */
 
 Route::apiResource('test_api_crud', CrudController::class)->middleware('cors');
+
+
