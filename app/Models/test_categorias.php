@@ -14,7 +14,7 @@ class test_categorias extends Model
     protected $fillable = ['name', 'slug'];
 
     // declarar el id
-    protected $primaryKey = 'id';
+    /* protected $primaryKey = 'id'; */
 
    
 
