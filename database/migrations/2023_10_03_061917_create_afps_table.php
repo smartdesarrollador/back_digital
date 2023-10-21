@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('afps', function (Blueprint $table) {
-            $table->id();
+            $table->id("id_afp");
+            $table->string("afp", 100)->nullable();
             $table->timestamps();
         });
     }
