@@ -4,8 +4,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TestApiController;
+use App\Http\Controllers\AccionController;
+
 
 use App\Http\Controllers\Test\Api\CrudController;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +24,20 @@ use App\Http\Controllers\Test\Api\CrudController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+/* Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
 
 Route::apiResource('test_api', TestApiController::class);
 
 /* crud basico */
 
 Route::apiResource('test_api_crud', CrudController::class)->middleware('cors');
+
+/* Route::get('acciones',[AccionController::class,'index']); */
+
+Route::apiResource('acciones', AccionController::class);
+
+
 
 

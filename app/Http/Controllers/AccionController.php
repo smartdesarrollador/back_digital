@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TestApi;
-use App\Models\Accion;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TestApiController extends Controller
+use App\Models\Accion;
+
+use Illuminate\Http\Response;
+
+
+class AccionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+     public function index()
     {
         //
-        return TestApi::all();
+        return Accion::all();
     }
 
     /**

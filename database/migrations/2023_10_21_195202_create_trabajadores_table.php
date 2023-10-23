@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('trabajadores', function (Blueprint $table) {
             $table->id("id_trabajador");
             $table->string("trabajador", 250)->nullable();
-            $table->string("nombre_paterno", 100)->nullable();
-            $table->string("nombre_materno", 100)->nullable();
+            $table->string("apellido_paterno", 100)->nullable();
+            $table->string("apellido_materno", 100)->nullable();
             $table->string("primer_nombre", 100)->nullable();
             $table->string("segundo_nombre", 100)->nullable();
             /* $table->unsignedBigInteger("id_tipo_documento")->nullable(); */
