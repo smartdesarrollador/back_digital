@@ -32,7 +32,13 @@ Route::apiResource('test_api', TestApiController::class);
 
 /* crud basico */
 
-Route::apiResource('test_api_crud', CrudController::class)->middleware('cors');
+/* Route::apiResource('test_api_crud', CrudController::class)->middleware('cors'); */
+
+Route::get('test_api_crud', [CrudController::class, 'index']);
+Route::post('test_api_crud', [CrudController::class, 'store']);
+Route::put('test_api_crud/{id}', [CrudController::class, 'update']);
+Route::delete('test_api_crud/{id}', [CrudController::class, 'destroy']);
+
 
 /* Route::get('acciones',[AccionController::class,'index']); */
 
