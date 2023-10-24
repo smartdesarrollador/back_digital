@@ -12,7 +12,7 @@ use Illuminate\Http\Response;
 
 class AccionController extends Controller
 {
-     public function index()
+    public function index()
     {
         //
         return Accion::all();
@@ -29,16 +29,16 @@ class AccionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TestApi $testApi)
+    public function show(Request $request)
     {
         //
-        return $testApi;
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, TestApi $testApi)
+    public function update(Request $request)
     {
         //
     }
@@ -46,7 +46,7 @@ class AccionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TestApi $testApi)
+    public function destroy(Request $request)
     {
         //
     }
