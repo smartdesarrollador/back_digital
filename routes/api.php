@@ -8,6 +8,7 @@ use App\Http\Controllers\AccionController;
 
 
 use App\Http\Controllers\Test\Api\CrudController;
+use App\Http\Controllers\Test\TestFileController;
 
 
 
@@ -44,6 +45,4 @@ Route::delete('test_api_crud/{id}', [CrudController::class, 'destroy']);
 
 Route::apiResource('acciones', AccionController::class);
 
-
-
-
+Route::post('file', [TestFileController::class, 'file']);
