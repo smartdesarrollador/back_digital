@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\TestApiController;
 use App\Http\Controllers\AccionController;
+use App\Http\Controllers\TrabajadorController;
 
 
 use App\Http\Controllers\Test\Api\CrudController;
@@ -46,3 +47,5 @@ Route::delete('test_api_crud/{id}', [CrudController::class, 'destroy']);
 Route::apiResource('acciones', AccionController::class);
 
 Route::post('file', [TestFileController::class, 'file']);
+
+Route::apiResource('trabajador', TrabajadorController::class);

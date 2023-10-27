@@ -1,40 +1,19 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Seeders;
 
-//use App\Models\TipoDocumento;
-//use App\Models\Ubigeo;
-use App\Models\Empleador;
-//use App\Models\RegimenLaboral;
-//use App\Models\Ocupacion;
-use App\Models\TipoContrato;
-//use App\Models\JornadaLaboral;
-//use App\Models\EstadoTrabajador;
-//use App\Models\NivelEducativo;
-//use App\Models\RegimenSalud;
-//use App\Models\RegimenPensiones;
-use App\Models\Afp;
-//use App\Models\MotivoBaja;
-use App\Models\Contrato;
-
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-
-use Illuminate\Database\Eloquent\Factories\Factory;
-
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Trabajador>
- */
-class TrabajadorFactory extends Factory
+class TrabajadorSeeder extends Seeder
 {
     /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
+     * Run the database seeds.
      */
-    public function definition(): array
+    public function run(): void
     {
-        return [
+        DB::table('trabajadores')->insert([
             'trabajador' => fake()->name(),
             'apellido_paterno' => fake()->firstName(),
             'apellido_materno' => fake()->lastName(),
@@ -67,8 +46,6 @@ class TrabajadorFactory extends Factory
             'fecha_egreso' => fake()->date('Y-m-d', 'now'),
             //'id_motivo_baja' => MotivoBaja::all()->random()->id,
             'fecha_baja' => fake()->date('Y-m-d', 'now'),
-
-
-        ];
+        ]);
     }
 }
