@@ -29,9 +29,13 @@ class TrabajadorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TrabajadorRequest $request)
     {
-        //
+        $trabajadores=Trabajador::create($request->all());
+        return response()->json([
+            'message'=>"Registro creado satisfactoriamente",
+            'category'=>$trabajadores
+        ],Response::HTTP_CREATED);
     }
 
     /**

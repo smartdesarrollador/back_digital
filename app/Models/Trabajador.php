@@ -28,6 +28,8 @@ class Trabajador extends Model
 
     protected $primaryKey = 'id_trabajador';
 
+    protected $fillable = ['trabajador', 'apellido_paterno','apellido_materno','primer_nombre','segundo_nombre','numero_documento','fecha_nacimiento','ruc','direccion','referencia','telefono','celular','correo','id_empleador','id_tipo_contrato','fecha_estado','id_afp','cuspp','es_discapacitado','es_sindicalizado','fecha_ingreso','fecha_egreso','fecha_baja'];
+
     public function contrato()
     {
         return $this->belongsToMany(Contrato::class, 'contrato_trabajadores', 'id_contrato', 'id_trabajador');

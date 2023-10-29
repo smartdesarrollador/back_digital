@@ -23,7 +23,11 @@ class AccionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $acciones=Accion::create($request->all());
+        return response()->json([
+            'message'=>"Registro creado satisfactoriamente",
+            'category'=>$acciones
+        ],Response::HTTP_CREATED);
     }
 
     /**

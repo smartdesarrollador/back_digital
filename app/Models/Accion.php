@@ -12,4 +12,6 @@ class Accion extends Model
     protected $table = 'acciones';
 
     protected $primaryKey = 'id_accion';
+
+    protected $fillable = ['accion', 'plazo_dias'];
 }
