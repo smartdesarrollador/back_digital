@@ -43,7 +43,13 @@ class TrabajadorController extends Controller
      */
     public function show(string $id)
     {
-        //
+         $trabajador = Trabajador::find($id);
+
+        if (!$trabajador) {
+            return response()->json(['message' => 'Registro no encontrado'], 404);
+        }
+
+        return response()->json($trabajador, 200);
     }
 
     /**
