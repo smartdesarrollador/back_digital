@@ -22,12 +22,12 @@ class TrabajadorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'trabajador' => 'required',
+            /* 'trabajador' => 'required',
             'apellido_paterno' => 'required',
             'apellido_materno' => 'required',
             'primer_nombre' => 'required',
             'segundo_nombre' => 'required',
-            /* 'numero_documento'=>'required',
+            'numero_documento'=>'required',
             'fecha_nacimiento'=>'required',
             'ruc'=>'required',
             'direccion'=>'required',

@@ -36,10 +36,10 @@ class TrabajadorFactory extends Factory
     {
         return [
             'trabajador' => fake()->name(),
-            'apellido_paterno' => fake()->firstName(),
+            'apellido_paterno' => fake()->lastName(),
             'apellido_materno' => fake()->lastName(),
-            'primer_nombre' => fake()->firstName(),
-            'segundo_nombre' => fake()->lastName(),
+            'primer_nombre' => fake()->firstNameMale(),
+            'segundo_nombre' => fake()->firstNameMale(),
             //'id_tipo_documento' => TipoDocumento::all()->random()->id,
             'numero_documento' => fake()->numberBetween(0, 100),
             'fecha_nacimiento' => fake()->date('Y-m-d', 'now'),
