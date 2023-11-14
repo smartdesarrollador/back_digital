@@ -54,3 +54,5 @@ Route::post('file', [TestFileController::class, 'file']);
 Route::apiResource('trabajador', TrabajadorController::class);
 
 Route::post('register',[UserController::class,'register']);
+
+Route::post('login',[UserController::class,'login']);
