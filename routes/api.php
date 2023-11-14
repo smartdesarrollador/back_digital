@@ -6,10 +6,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestApiController;
 use App\Http\Controllers\AccionController;
 use App\Http\Controllers\TrabajadorController;
+use App\Http\Controllers\UserController;
 
 
 use App\Http\Controllers\Test\Api\CrudController;
 use App\Http\Controllers\Test\TestFileController;
+
+
 
 
 
@@ -49,3 +52,5 @@ Route::apiResource('acciones', AccionController::class);
 Route::post('file', [TestFileController::class, 'file']);
 
 Route::apiResource('trabajador', TrabajadorController::class);
+
+Route::post('register',[UserController::class,'register']);
