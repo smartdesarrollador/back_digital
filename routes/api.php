@@ -8,6 +8,9 @@ use App\Http\Controllers\AccionController;
 use App\Http\Controllers\TrabajadorController;
 use App\Http\Controllers\UserController;
 
+use App\Mail\TestContact;
+use App\Http\Controllers\Test\ContactController;
+
 
 use App\Http\Controllers\Test\Api\CrudController;
 use App\Http\Controllers\Test\TestFileController;
@@ -56,3 +59,12 @@ Route::apiResource('trabajador', TrabajadorController::class);
 Route::post('register',[UserController::class,'register']);
 
 Route::post('login',[UserController::class,'login']);
+
+
+/* Test Envio Mail */
+Route::get('contactanos',function(){
+    Mail::to('sistemadesignstyle@gmail.com')->send(new TestContact);
+    return "mensaje enviado";
+})->name('contactanos');
+
+Route::post('enviar_correo',[ContactController::class,'sendContactForm']);
