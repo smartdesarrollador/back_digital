@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Empleador;
+use App\Http\Requests\EmpleadorRequest;
+use Illuminate\Http\Response;
+
+class EmpleadorController extends Controller
+{
+    public function index()
+    {
+        $empleadores = Empleador::all();
+        return response()->json($empleadores, Response::HTTP_OK);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(EmpleadorRequest $request)
+    {
+        $empleadores=Empleador::create($request->all());
+        return response()->json([
+            'message'=>"Registro creado satisfactoriamente",
+            'category'=>$empleadores
+        ],Response::HTTP_CREATED);
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+         $empleador = Empleador::find($id);
+
+        if (!$empleador) {
+            return response()->json(['message' => 'Registro no encontrado'], 404);
+        }
+
+        return response()->json($empleador, 200);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
+}

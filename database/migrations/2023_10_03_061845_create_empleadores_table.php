@@ -16,6 +16,13 @@ return new class extends Migration
             $table->string("empleador", 100)->nullable();
             $table->string("ruc", 100)->nullable();
             $table->string("domicilio", 100)->nullable();
+            $table->string("representante_legal", 200)->nullable();
+            $table->string("cargo_representante_legal", 100)->nullable();
+            $table->string("numero_partida_poderes", 100)->nullable();
+            $table->string("numero_asiento", 100)->nullable();
+            $table->string("oficina_registral", 200)->nullable();
+            $table->string("numero_partida_registral", 100)->nullable();
+            $table->string("fecha_inicio_actividades", 100)->nullable();
             /* $table->unsignedBigInteger("id_ubigeo")->nullable(); */
             /* $table->foreign("id_ubigeo")->references("id_ubigeo")->on("ubigeos")->onDelete("set null"); */
             /* $table->unsignedBigInteger("id_sector")->nullable(); */

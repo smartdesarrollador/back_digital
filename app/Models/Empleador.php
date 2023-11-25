@@ -19,6 +19,8 @@ class Empleador extends Model
 
     protected $primaryKey = 'id_empleador';
 
+    protected $fillable = ['empleador','ruc','domicilio','representante_legal','cargo_representante_legal','numero_partida_poderes','numero_partida_poderes','numero_asiento','oficina_registral','numero_partida_registral','fecha_inicio_actividadess'];
+
     public function contrato()
     {
         return $this->hasMany(Contrato::class, 'id_empleador', 'id_empleador');
