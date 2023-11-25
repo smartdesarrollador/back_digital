@@ -72,4 +72,16 @@ class EmpleadorController extends Controller
     {
         //
     }
+
+    public function ultimo_empleador()
+    {
+$ultimoRegistro = Empleador::latest('id_empleador')->first(); // Obtiene el último registro ordenado por el campo 'id' de manera descendente
+
+    if ($ultimoRegistro) {
+        $ultimoId = $ultimoRegistro->id_empleador; // Obtiene el ID del último registro
+        return response()->json(['id_empleador' => $ultimoId]);
+    } else {
+        return response()->json(['mensaje' => 'No se encontraron registros en la tabla empleador'], 404);
+    }
+    }
 }
