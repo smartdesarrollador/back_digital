@@ -15,7 +15,7 @@ $user = User::where('email',$request['email'])->first();
 
 if($user){
     $response['status'] = 0;
-        $response['message'] = 'Email Already Exists';
+        $response['message'] = 'El Email ya existe';
         $response['code'] = 200;
 }else{
 $user = User::create([
@@ -24,7 +24,7 @@ $user = User::create([
             'password' => bcrypt($request->password)
         ]);
         $response['status'] = 1;
-        $response['message'] = 'User Registered Successfully';
+        $response['message'] = 'Usuario registrado exitosamente';
         $response['code'] = 200;
 }
 
@@ -40,13 +40,13 @@ if(!JWTAuth::attempt($credentials)){
     $response['status'] = 0;
         $response['code'] = 401;
         $response['data'] = null;
-        $response['message'] = 'Email or Password is incorrect';
+        $response['message'] = 'El correo o la contraseña son incorrectos';
         return response()->json($response);
 }
         }catch(JWTException $e){
             $response['data'] = null;
         $response['code'] = 500;
-        $response['message'] = 'Could Not Create Token';
+        $response['message'] = 'No se pudo crear el token';
         return response()->json($response);
         }
 
@@ -59,7 +59,7 @@ if(!JWTAuth::attempt($credentials)){
         $response['data'] = $data;
         $response['status'] = 1;
         $response['code'] = 200;
-        $response['message'] = 'Login Successfully';
+        $response['message'] = 'Inicio de sesión exitosamente';
 
         return response()->json($response);
 
