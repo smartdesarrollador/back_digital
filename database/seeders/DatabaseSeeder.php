@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Accion::factory(7)->create();
         \App\Models\ActividadDenuncia::factory(7)->create();
+        \App\Models\ActividadEconomica::factory(7)->create();
         \App\Models\Anno::factory(7)->create();
         \App\Models\Empleador::factory(7)->create();
         \App\Models\Modalidad::factory(7)->create();
