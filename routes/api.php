@@ -61,6 +61,8 @@ Route::apiResource('empleador', EmpleadorController::class);
 
 Route::get('ultimo_empleador',[EmpleadorController::class,'ultimo_empleador']);
 
+Route::get('actividad_ultimo_empleador',[EmpleadorController::class,'actividad_ultimo_empleador']);
+
 Route::post('register',[UserController::class,'register']);
 
 Route::post('login',[UserController::class,'login']);

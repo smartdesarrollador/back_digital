@@ -10,6 +10,7 @@ use App\Models\Trabajador;
 use App\Models\Documento;
 use App\Models\Ubigeo;
 use App\Models\Sector;
+use App\Models\ActividadEconomica;
 
 class Empleador extends Model
 {
@@ -47,6 +48,11 @@ class Empleador extends Model
     {
         return $this->belongsTo(Sector::class, 'id_sector', 'id_sector');
     } */
+
+    public function actividadEconomica()
+    {
+        return $this->belongsTo(ActividadEconomica::class, 'id_actividad_economica');
+    }
 
     
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Empleador;
 use App\Http\Requests\EmpleadorRequest;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class EmpleadorController extends Controller
 {
@@ -83,5 +84,16 @@ $ultimoRegistro = Empleador::latest('id_empleador')->first(); // Obtiene el últ
     } else {
         return response()->json(['mensaje' => 'No se encontraron registros en la tabla empleador'], 404);
     }
+    }
+
+     public function actividad_ultimo_empleador()
+    {
+  $empleadosConActividad = DB::table('empleadores')
+            ->join('actividades_economicas', 'empleadores.id_actividad_economica', '=', 'actividades_economicas.id_actividad_economica')
+            ->orderBy('empleadores.created_at', 'desc')
+            ->select('empleadores.empleador','empleadores.ruc','empleadores.domicilio','empleadores.representante_legal','empleadores.dni_representante_legal','empleadores.cargo_representante_legal','empleadores.numero_partida_poderes','empleadores.numero_asiento','empleadores.oficina_registral','empleadores.numero_partida_registral', 'actividades_economicas.actividad_economica')
+            ->first();
+
+        return response()->json($empleadosConActividad);
     }
 }
