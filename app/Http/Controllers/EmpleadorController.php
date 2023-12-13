@@ -90,7 +90,7 @@ $ultimoRegistro = Empleador::latest('id_empleador')->first(); // Obtiene el últ
     {
   $empleadosConActividad = DB::table('empleadores')
             ->join('actividades_economicas', 'empleadores.id_actividad_economica', '=', 'actividades_economicas.id_actividad_economica')
-            ->orderBy('empleadores.created_at', 'desc')
+            ->orderBy('empleadores.id_empleador', 'desc')
             ->select('empleadores.empleador','empleadores.ruc','empleadores.domicilio','empleadores.representante_legal','empleadores.dni_representante_legal','empleadores.cargo_representante_legal','empleadores.numero_partida_poderes','empleadores.numero_asiento','empleadores.oficina_registral','empleadores.numero_partida_registral', 'actividades_economicas.actividad_economica')
             ->first();
 
