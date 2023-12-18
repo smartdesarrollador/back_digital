@@ -30,6 +30,8 @@ return new class extends Migration
             /* $table->foreign("id_sector")->references("id_sector")->on("sectores")->onDelete("set null"); */
             $table->unsignedBigInteger("id_actividad_economica")->nullable();
             $table->foreign("id_actividad_economica")->references("id_actividad_economica")->on("actividades_economicas")->onDelete("set null");
+            $table->unsignedBigInteger("id_user")->nullable()->unique();;
+            $table->foreign("id_user")->references("id")->on("users")->onDelete("set null");
             $table->timestamps();
         });
     }

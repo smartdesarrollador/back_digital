@@ -61,9 +61,21 @@ class EmpleadorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(EmpleadorRequest $request, string $id)
     {
-        //
+        $empleador=Empleador::find($id);
+        $empleador->update($request->only('empleador','ruc','domicilio','representante_legal','dni_representante_legal','numero_partida_poderes','numero_asiento','oficiona_registral','numero_partida_registral'));
+        return response()->json([
+            'message'=>"Registro actualizado satisfactoriamente",
+            'category'=>$empleador
+        ],Response::HTTP_CREATED);
+
+
+        $empleadores=Empleador::create($request->all());
+        return response()->json([
+            'message'=>"Registro creado satisfactoriamente",
+            'category'=>$empleadores
+        ],Response::HTTP_CREATED);
     }
 
     /**
