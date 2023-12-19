@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'name' => "Jacky",
             'email' => "jacky@testcorreo.com",
             'email_verified_at' => null,
-            'password' => Hash::make('admin123'),
+            'password' => Hash::make('1234567'),
             'remember_token' => null,
         ]);
 
