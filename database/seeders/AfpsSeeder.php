@@ -13,17 +13,17 @@ class AfpsSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('productos')->insert([
+        DB::table('afps')->insert([
             'id_afp' => 1,
             'afp' => 'afp 1',
         ]);
 
-        DB::table('productos')->insert([
+        DB::table('afps')->insert([
             'id_afp' => 2,
             'afp' => 'afp 2',
         ]);
     
-        DB::table('productos')->insert([
+        DB::table('afps')->insert([
             'id_afp' => 3,
             'afp' => 'afp 3',
         ]);

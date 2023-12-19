@@ -26,7 +26,7 @@ class AccionesSeeder extends Seeder
         ]);
 
         DB::table('acciones')->insert([
-            'id_accion' => 1,
+            'id_accion' => 3,
             'accion' => "Gestionar",
             'plazo_dias' => 7,
         ]);

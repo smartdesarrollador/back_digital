@@ -35,7 +35,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\Contrato::factory(7)->create(); */
 
         $this->call([
-            ActividadEconomica::class,
+            UserSeeder::class,
+            ActividadesEconomicasSeeder::class,
             AccionesSeeder::class,
             ActividadesDenunciasSeeder::class,
             AnnosSeeder::class,
@@ -45,6 +46,8 @@ class DatabaseSeeder extends Seeder
             EstadoContratosSeeder::class,
             TipoContratosSeeder::class,
             TrabajadorSeeder::class,
+            DocumentosSeeder::class,
+            ContratosSeeder::class,
 
            
         ]);

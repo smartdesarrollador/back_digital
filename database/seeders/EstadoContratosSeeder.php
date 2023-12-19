@@ -14,22 +14,22 @@ class EstadoContratosSeeder extends Seeder
     public function run(): void
     {
         DB::table('estado_contratos')->insert([
-            'id_estado_contratos' => 1,
+            'id_estado_contrato' => 1,
             'estado_contrato' => 'true',
         ]);
 
         DB::table('estado_contratos')->insert([
-            'id_estado_contratos' => 2,
+            'id_estado_contrato' => 2,
             'estado_contrato' => 'false',
         ]);
 
         DB::table('estado_contratos')->insert([
-            'id_estado_contratos' => 3,
+            'id_estado_contrato' => 3,
             'estado_contrato' => 'true',
         ]);
 
         DB::table('estado_contratos')->insert([
-            'id_estado_contratos' => 4,
+            'id_estado_contrato' => 4,
             'estado_contrato' => 'true',
         ]);
     }

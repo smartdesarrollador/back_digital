@@ -19,7 +19,7 @@ class EmpleadoresSeeder extends Seeder
             'ruc' => "20690506095",
             'domicilio' => 'Av. Arequipa 1549, Lince',
             'representante_legal' => 'Jacky',
-            'dni_representante' => "190980098",
+            'dni_representante_legal' => "190980098",
             'cargo_representante_legal' => "Gerente General",
             'numero_partida_poderes' => '1745',
             'numero_asiento' => "0185",
@@ -27,6 +27,7 @@ class EmpleadoresSeeder extends Seeder
             'numero_partida_registral' => '7185',
             'fecha_inicio_actividades' => '18-11-2023',
             'id_actividad_economica' => 1,
+            'id_user' => 1,
         ]);
 
         DB::table('empleadores')->insert([
@@ -35,7 +36,7 @@ class EmpleadoresSeeder extends Seeder
             'ruc' => "20690506095",
             'domicilio' => 'Av. Canevaro 3514, Lince',
             'representante_legal' => 'Juan',
-            'dni_representante' => "190980098",
+            'dni_representante_legal' => "190980098",
             'cargo_representante_legal' => "Analista de Sistemas",
             'numero_partida_poderes' => '1745',
             'numero_asiento' => "0185",
@@ -43,6 +44,7 @@ class EmpleadoresSeeder extends Seeder
             'numero_partida_registral' => '7185',
             'fecha_inicio_actividades' => '18-11-2023',
             'id_actividad_economica' => 2,
+            'id_user' => 2,
         ]);
     
         DB::table('empleadores')->insert([
@@ -51,7 +53,7 @@ class EmpleadoresSeeder extends Seeder
             'ruc' => "20690506095",
             'domicilio' => 'Av. Arenales 1549, Lince',
             'representante_legal' => 'James',
-            'dni_representante' => "190980098",
+            'dni_representante_legal' => "190980098",
             'cargo_representante_legal' => "Gerente General",
             'numero_partida_poderes' => '1748',
             'numero_asiento' => "0185",
@@ -59,6 +61,7 @@ class EmpleadoresSeeder extends Seeder
             'numero_partida_registral' => '7185',
             'fecha_inicio_actividades' => '19-11-2023',
             'id_actividad_economica' => 1,
+            'id_user' => 3,
         ]);
     }
 }
