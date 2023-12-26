@@ -25,10 +25,10 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'id' => 2,
-            'name' => "Jorge",
-            'email' => "jorge@testcorreo.com",
+            'name' => "Prueba",
+            'email' => "pruebas@testcorreo.com",
             'email_verified_at' => null,
-            'password' => Hash::make('admin2023'),
+            'password' => Hash::make('testing2023'),
             'remember_token' => null,
         ]);
     
