@@ -19,6 +19,7 @@ use App\Models\TipoContrato;
 use App\Models\Afp;
 //use App\Models\MotivoBAja;
 use App\Models\Contrato;
+use App\Models\User;
 
 class Trabajador extends Model
 {
@@ -106,7 +107,10 @@ class Trabajador extends Model
         return $this->belongsTo(MotivoBaja::class, 'id_motivo_baja', 'id_motivo_baja');
     } */
 
-    
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     
 
 }

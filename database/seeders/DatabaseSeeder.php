@@ -36,6 +36,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UserSeeder::class,
+            RolesSeeder::class,
+            PermisosSeeder::class,
+            PermisosRolesSeeder::class,
+            RolesUsuariosSeeder::class,
             ActividadesEconomicasSeeder::class,
             AccionesSeeder::class,
             ActividadesDenunciasSeeder::class,
@@ -48,6 +52,7 @@ class DatabaseSeeder extends Seeder
             TrabajadorSeeder::class,
             DocumentosSeeder::class,
             ContratosSeeder::class,
+            ContratoTrabajadoresSeeder::class,
 
            
         ]);

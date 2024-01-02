@@ -59,6 +59,8 @@ return new class extends Migration
             /* $table->unsignedBigInteger("id_motivo_baja")->nullable(); */
             /* $table->foreign("id_motivo_baja")->references("id_motivo_baja")->on("motivo_bajas")->onDelete("set null"); */
             $table->date("fecha_baja")->nullable();
+            $table->unsignedBigInteger("id_user")->nullable();
+            $table->foreign("id_user")->references("id")->on("users")->onDelete("set null");
             $table->timestamps();
         });
     }
