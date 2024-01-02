@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\TestApiController;
+
 use App\Http\Controllers\AccionController;
 use App\Http\Controllers\TrabajadorController;
 use App\Http\Controllers\EmpleadorController;
@@ -15,6 +15,9 @@ use App\Http\Controllers\Test\ContactController;
 
 use App\Http\Controllers\Test\Api\CrudController;
 use App\Http\Controllers\Test\TestFileController;
+use App\Http\Controllers\TestApiController;
+use App\Http\Controllers\Test\TestConsultasController;
+
 
 
 
@@ -38,6 +41,8 @@ use App\Http\Controllers\Test\TestFileController;
 }); */
 
 Route::apiResource('test_api', TestApiController::class);
+
+Route::get('test/consulta1', [TestConsultasController::class, 'consulta1']);
 
 /* crud basico */
 
