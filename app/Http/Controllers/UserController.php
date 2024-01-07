@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Rol;
+use App\Models\Permiso;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTExceptions;
 
@@ -35,7 +37,7 @@ $user = User::create([
     public function login(Request $request){
         $credentials = $request->only('email','password');
 
-        try{
+         try{
 if(!JWTAuth::attempt($credentials)){
     $response['status'] = 0;
         $response['code'] = 401;
@@ -51,9 +53,13 @@ if(!JWTAuth::attempt($credentials)){
         }
 
         $user = auth()->user();
+        $usuario = User::find($user->id);
+        $roles = $usuario->rol()->pluck('nombre')->toArray(); 
+
         $data['token'] = auth()->claims([
             'user_id' => $user->id,
-            'email' => $user->email
+            'email' => $user->email,
+            'rol' => $roles[0]
         ])->attempt($credentials);
 
         $response['data'] = $data;
