@@ -33,7 +33,7 @@ return $todos_trabajadores; */
 /* $ContratoById = Contrato::find(3);
 return $ContratoById; */
 
-$usuarios = User::find(3);
+$usuarios = User::find(1);
 $roles = $usuarios->rol()->pluck('nombre')->toArray();
 return $roles;
    
