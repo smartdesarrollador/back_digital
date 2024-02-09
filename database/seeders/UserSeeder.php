@@ -16,19 +16,19 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'id' => 1,
-            'name' => "Jacky",
-            'email' => "jacky@testcorreo.com",
+            'name' => "admin",
+            'email' => "admin@testcorreo.com",
             'email_verified_at' => null,
-            'password' => Hash::make('1234567'),
+            'password' => Hash::make('admin4'),
             'remember_token' => null,
         ]);
 
         DB::table('users')->insert([
             'id' => 2,
-            'name' => "Prueba",
-            'email' => "pruebas@testcorreo.com",
+            'name' => "Jacky",
+            'email' => "jacky@testcorreo.com",
             'email_verified_at' => null,
-            'password' => Hash::make('testing2023'),
+            'password' => Hash::make('1234567'),
             'remember_token' => null,
         ]);
     
@@ -40,5 +40,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('peru123'),
             'remember_token' => null,
         ]);
+
+        
     }
 }
