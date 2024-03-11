@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('medios', function (Blueprint $table) {
             $table->id("id_medios");
-            $table->string('nombre');
-            $table->string('url');
+            $table->string('nombre')->nullable();
+            $table->string('url')->nullable();
             $table->unsignedBigInteger('id_tipos_medios')->nullable();
             $table->foreign('id_tipos_medios')->references('id_tipos_medios')->on('tipos_medios')->onDelete("set null");
             $table->timestamps();
