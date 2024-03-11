@@ -53,6 +53,8 @@ class DatabaseSeeder extends Seeder
             DocumentosSeeder::class,
             ContratosSeeder::class,
             ContratoTrabajadoresSeeder::class,
+            TiposMediosSeeder::class,
+            MediosSeeder::class,
 
            
         ]);
