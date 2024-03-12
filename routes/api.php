@@ -63,6 +63,8 @@ Route::post('file', [TestFileController::class, 'file']);
 
 Route::post('upload', [FileController::class, 'file']);
 
+Route::put('update/upload/{id}', [FileController::class, 'updateFile']);
+
 Route::apiResource('trabajador', TrabajadorController::class);
 
 Route::apiResource('empleador', EmpleadorController::class);
