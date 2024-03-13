@@ -61,6 +61,8 @@ Route::apiResource('acciones', AccionController::class);
 
 Route::post('file', [TestFileController::class, 'file']);
 
+Route::get('listar/files', [FileController::class, 'index']);
+
 Route::post('upload', [FileController::class, 'file']);
 
 Route::put('update/upload/{id}', [FileController::class, 'updateFile']);

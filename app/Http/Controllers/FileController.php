@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Response;
 
 use App\Models\Medio;
 use App\Models\TipoMedio;
 
 class FileController extends Controller
 {
+    public function index(){
+        $medios=Medio::all();
+        return response()->json($medios,Response::HTTP_OK);
+    }
+
     public function file(Request $request)
     {
         $post = new Medio();
@@ -21,6 +28,7 @@ class FileController extends Controller
             $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extenshion;
             $path = $request->file('nombre')->storeAs('public/posts', $compPic);
             $post->nombre = $compPic;
+            $post->url = "storage/posts/".$compPic;
         }
         if ($post->save()) {
             return ['status' => true, 'message' => 'Post Saved Successfully'];
