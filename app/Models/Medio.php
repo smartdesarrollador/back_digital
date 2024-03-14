@@ -13,6 +13,8 @@ class Medio extends Model
 
     protected $table = 'medios';
 
+    protected $fillable = ['nombre', 'url'];
+
     protected $primaryKey = 'id_medios';
 
     public function tipos_medios()

@@ -67,4 +67,12 @@ class FileController extends Controller
     }
 }
 
+ public function destroy($category){
+        $category=Medio::find($category);
+        $category->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+    }
+
 }
