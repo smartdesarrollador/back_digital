@@ -65,7 +65,7 @@ Route::get('listar/files', [FileController::class, 'index']);
 
 Route::post('upload', [FileController::class, 'file']);
 
-Route::put('update/upload/{id}', [FileController::class, 'updateFile']);
+Route::post('update/upload', [FileController::class, 'updateFile']);
 
 Route::delete('update/upload/{id}', [FileController::class, 'destroy']);
 

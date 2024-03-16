@@ -37,8 +37,9 @@ class FileController extends Controller
         }
     }
 
-    public function updateFile(Request $request, $id)
+    public function updateFile(Request $request)
 {
+    $id = $request->input('id_medios');
     $post = Medio::find($id);
 
     if (!$post) {
@@ -58,10 +59,16 @@ class FileController extends Controller
         }
 
         $post->nombre = $compPic;
+        $post->url = "storage/posts/".$compPic;
+
+       
+
     }
 
+    
+
     if ($post->save()) {
-        return ['status' => true, 'message' => 'Post Updated Successfully'];
+        return ['status' => true, 'message' => 'Post Updated Successfully '];
     } else {
         return ['status' => false, 'message' => 'Something Went Wrong'];
     }
