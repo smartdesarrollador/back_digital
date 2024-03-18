@@ -26,15 +26,11 @@ class FileController extends Controller
             $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
             $extenshion = $request->file('nombre')->getClientOriginalExtension();
             $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extenshion;
-            /* $path = $request->file('nombre')->storeAs('public/posts', $compPic); */
-           
-            /* $post->url = "storage/posts/".$compPic; */
-
-        // Cambia la ruta de almacenamiento a la carpeta public
-        $path = $request->file('nombre')->move(public_path('posts'), $compPic);
+           //$path = $request->file('nombre')->move('/home1/iatecdigital/back.iatecdigital.com/posts', $compPic);
+           $path = $request->file('nombre')->move(public_path('posts'), $compPic);
 
         $post->nombre = $compPic;
-        $post->url = "posts/".$compPic; // La URL ahora será relativa a la carpeta public
+        $post->url = "posts/".$compPic; 
         }
         if ($post->save()) {
             return ['status' => true, 'message' => 'Post Saved Successfully'];
@@ -57,21 +53,21 @@ class FileController extends Controller
         $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
         $extension = $request->file('nombre')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
-        /* $path = $request->file('nombre')->storeAs('public/posts', $compPic); */
-
+        
+         //$path = $request->file('nombre')->move('/home1/iatecdigital/back.iatecdigital.com/posts', $compPic);
          $path = $request->file('nombre')->move(public_path('posts'), $compPic);
 
         
         
 
-        // Eliminar la imagen anterior si existe
+        
         if ($post->nombre) {
-            /* Storage::delete('public/posts/' . $post->nombre); */
+            
             $this->deleteFile($post->nombre);
         }
 
         $post->nombre = $compPic;
-        /* $post->url = "storage/posts/".$compPic; */
+        
         $post->url = "posts/".$compPic;
 
        
@@ -98,19 +94,18 @@ class FileController extends Controller
 
     public function deleteFile($fileName)
 {
-    // Construye la ruta completa del archivo en la carpeta public
+    //$filePath = '/home1/iatecdigital/back.iatecdigital.com/posts/' . $fileName;
     $filePath = public_path('posts/' . $fileName);
 
-    // Verifica si el archivo existe antes de intentar eliminarlo
+    
     if (file_exists($filePath)) {
-        // Intenta eliminar el archivo
+        
         if (unlink($filePath)) {
-            return true; // Retorna true si el archivo se eliminó correctamente
-        } else {
-            return false; // Retorna false si hubo algún error al eliminar el archivo
+            return true; 
+            return false; 
         }
     } else {
-        return true; // Retorna true si el archivo no existe (considerado como eliminado)
+        return true; 
     }
 }
 
