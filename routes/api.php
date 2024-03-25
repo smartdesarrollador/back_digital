@@ -18,6 +18,7 @@ use App\Http\Controllers\Test\TestFileController;
 use App\Http\Controllers\TestApiController;
 use App\Http\Controllers\Test\TestConsultasController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\MisionController;
 
 
 
@@ -59,6 +60,8 @@ Route::delete('test_api_crud/{id}', [CrudController::class, 'destroy']);
 
 Route::apiResource('acciones', AccionController::class);
 
+
+/* Upload imagenes */
 Route::post('file', [TestFileController::class, 'file']);
 
 Route::get('listar/files', [FileController::class, 'index']);
@@ -68,6 +71,12 @@ Route::post('upload', [FileController::class, 'file']);
 Route::post('update/upload', [FileController::class, 'updateFile']);
 
 Route::delete('update/upload/{id}', [FileController::class, 'destroy']);
+
+
+/* Crud Mision */
+
+Route::get('mision', [MisionController::class, 'index']);
+
 
 Route::apiResource('trabajador', TrabajadorController::class);
 
