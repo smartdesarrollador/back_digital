@@ -17,6 +17,8 @@ return new class extends Migration
            $table->string("url_imagen_mision", 250)->nullable();
            $table->string("titulo_mision", 250)->nullable();
            $table->text('contenido_mision')->nullable();
+           $table->text('contenido_vision')->nullable();
+           $table->text('contenido_valores')->nullable();
             $table->timestamps();
         });
     }

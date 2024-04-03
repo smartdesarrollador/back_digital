@@ -12,4 +12,6 @@ class Mision extends Model
     protected $table = 'mision';
 
     protected $primaryKey = 'id_mision';
+
+    protected $fillable = ['imagen_mision', 'url_imagen_mision','titulo_mision','contenido_mision','contenido_vision','contenido_valores'];
 }

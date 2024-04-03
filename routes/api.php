@@ -77,6 +77,10 @@ Route::delete('update/upload/{id}', [FileController::class, 'destroy']);
 
 Route::get('mision', [MisionController::class, 'index']);
 
+Route::put('mision/actualizar/{id}', [MisionController::class, 'update']);
+
+Route::post('mision/update/upload', [MisionController::class, 'updateFile']);
+
 
 Route::apiResource('trabajador', TrabajadorController::class);
 

@@ -12,6 +12,16 @@ use App\Models\TipoMedio;
 
 class FileController extends Controller
 {
+    private $urlAssets;
+    private $urlAssetsProd;
+
+    public function __construct()
+    {
+        // Inicializar la variable global en el constructor
+        $this->urlAssets = 'assets/imagen/banner';
+        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/banner';
+    }
+
     public function index(){
         $medios=Medio::all();
         return response()->json($medios,Response::HTTP_OK);
@@ -26,11 +36,11 @@ class FileController extends Controller
             $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
             $extenshion = $request->file('nombre')->getClientOriginalExtension();
             $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extenshion;
-           //$path = $request->file('nombre')->move('/home1/iatecdigital/back.iatecdigital.com/posts', $compPic);
-           $path = $request->file('nombre')->move(public_path('posts'), $compPic);
+           //$path = $request->file('nombre')->move($this->urlAssetsProd, $compPic);
+           $path = $request->file('nombre')->move(public_path($this->urlAssets), $compPic);
 
         $post->nombre = $compPic;
-        $post->url = "posts/".$compPic; 
+        $post->url = $this->urlAssets.'/'.$compPic; 
         }
         if ($post->save()) {
             return ['status' => true, 'message' => 'Post Saved Successfully'];
@@ -54,8 +64,8 @@ class FileController extends Controller
         $extension = $request->file('nombre')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
         
-         //$path = $request->file('nombre')->move('/home1/iatecdigital/back.iatecdigital.com/posts', $compPic);
-         $path = $request->file('nombre')->move(public_path('posts'), $compPic);
+         //$path = $request->file('nombre')->move($this->urlAssetsProd, $compPic);
+         $path = $request->file('nombre')->move(public_path($this->urlAssets), $compPic);
 
         
         
@@ -68,7 +78,7 @@ class FileController extends Controller
 
         $post->nombre = $compPic;
         
-        $post->url = "posts/".$compPic;
+        $post->url = $this->urlAssets.'/'.$compPic;
 
        
 
@@ -94,8 +104,8 @@ class FileController extends Controller
 
     public function deleteFile($fileName)
 {
-    //$filePath = '/home1/iatecdigital/back.iatecdigital.com/posts/' . $fileName;
-    $filePath = public_path('posts/' . $fileName);
+    //$filePath = $this->urlAssetsProd . '/' . $fileName;
+    $filePath = public_path($this->urlAssets .'/'. $fileName);
 
     
     if (file_exists($filePath)) {
