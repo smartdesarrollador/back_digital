@@ -16,28 +16,23 @@ class CarouselSeeder extends Seeder
         DB::table('carousel')->insert([
             'id_carousel' => 1,
             'nombre_carousel' => "imagen1.jpg",
-            'url_carousel' => "assets/imagene/carousel/imagen1.jpg",
+            'url_carousel' => "assets/imagen/carousel/imagen1.jpg",
 
         ]);
 
         DB::table('carousel')->insert([
             'id_carousel' => 2,
             'nombre_carousel' => "imagen2.jpg",
-        'url_carousel' => "assets/imagene/carousel/imagen2.jpg",
+        'url_carousel' => "assets/imagen/carousel/imagen2.jpg",
         ]);
     
     DB::table('carousel')->insert([
             'id_carousel' => 3,
             'nombre_carousel' => "imagen3.jpg",
-            'url_carousel' => "assets/imagene/carousel/imagen3.jpg",
+            'url_carousel' => "assets/imagen/carousel/imagen3.jpg",
 
         ]);
 
-        DB::table('carousel')->insert([
-            'id_carousel' => 4,
-            'nombre_carousel' => "imagen4.jpg",
-            'url_carousel' => "assets/imagene/carousel/imagen4.jpg",
-
-        ]);
+       
     }
 }
