@@ -56,6 +56,7 @@ class DatabaseSeeder extends Seeder
             TiposMediosSeeder::class,
             MediosSeeder::class,
             MisionSeeder::class,
+            CarouselSeeder::class,
 
            
         ]);

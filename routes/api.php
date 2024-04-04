@@ -19,6 +19,7 @@ use App\Http\Controllers\TestApiController;
 use App\Http\Controllers\Test\TestConsultasController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MisionController;
+use App\Http\Controllers\CarouselController;
 
 
 
@@ -72,6 +73,16 @@ Route::post('update/upload', [FileController::class, 'updateFile']);
 
 Route::delete('update/upload/{id}', [FileController::class, 'destroy']);
 
+
+/* Upload imagenes Carousel */
+
+Route::get('carousel/listar/files', [CarouselController::class, 'index']);
+
+Route::post('carousel/upload', [CarouselController::class, 'file']);
+
+Route::post('carousel/update/upload', [CarouselController::class, 'updateFile']);
+
+Route::delete('carousel/update/upload/{id}', [CarouselController::class, 'destroy']);
 
 /* Crud Mision */
 
