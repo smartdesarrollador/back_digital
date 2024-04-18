@@ -40,25 +40,10 @@ class DatabaseSeeder extends Seeder
             PermisosSeeder::class,
             PermisosRolesSeeder::class,
             RolesUsuariosSeeder::class,
-            ActividadesEconomicasSeeder::class,
-            AccionesSeeder::class,
-            ActividadesDenunciasSeeder::class,
-            AnnosSeeder::class,
-            EmpleadoresSeeder::class,
-            ModalidadesSeeder::class,
-            AfpsSeeder::class,
-            EstadoContratosSeeder::class,
-            TipoContratosSeeder::class,
-            TrabajadorSeeder::class,
-            DocumentosSeeder::class,
-            ContratosSeeder::class,
-            ContratoTrabajadoresSeeder::class,
             TiposMediosSeeder::class,
             MediosSeeder::class,
             MisionSeeder::class,
             CarouselSeeder::class,
-
-           
         ]);
     }
 }

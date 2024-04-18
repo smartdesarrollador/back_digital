@@ -4,9 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-use App\Http\Controllers\AccionController;
-use App\Http\Controllers\TrabajadorController;
-use App\Http\Controllers\EmpleadorController;
+
 use App\Http\Controllers\UserController;
 
 use App\Mail\TestContact;
@@ -57,9 +55,7 @@ Route::put('test_api_crud/{id}', [CrudController::class, 'update']);
 Route::delete('test_api_crud/{id}', [CrudController::class, 'destroy']);
 
 
-/* Route::get('acciones',[AccionController::class,'index']); */
 
-Route::apiResource('acciones', AccionController::class);
 
 
 /* Upload imagenes */
@@ -92,14 +88,6 @@ Route::put('mision/actualizar/{id}', [MisionController::class, 'update']);
 
 Route::post('mision/update/upload', [MisionController::class, 'updateFile']);
 
-
-Route::apiResource('trabajador', TrabajadorController::class);
-
-Route::apiResource('empleador', EmpleadorController::class);
-
-Route::get('ultimo_empleador',[EmpleadorController::class,'ultimo_empleador']);
-
-Route::get('actividad_ultimo_empleador',[EmpleadorController::class,'actividad_ultimo_empleador']);
 
 Route::post('register',[UserController::class,'register']);
 
