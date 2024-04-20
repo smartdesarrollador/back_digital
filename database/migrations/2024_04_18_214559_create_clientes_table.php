@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->id();
+            $table->id("id_clientes");
             $table->string("nombre", 250)->nullable();
             $table->string("apellido", 250)->nullable();
             $table->string("email", 250)->nullable();
-            $table->string("password", 250)->nullable();
+            /* $table->string("password", 250)->nullable(); */
             $table->string("dni", 250)->nullable();
             $table->string("celular", 250)->nullable();
             $table->string("direccion", 250)->nullable();
-            $table->string("reputacion", 250)->nullable();
+           /*  $table->string("reputacion", 250)->nullable();
             $table->integer("puntos")->nullable();
             $table->string("estado", 250)->nullable();
             $table->date("fechaRegistro")->nullable();
@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string("distrito", 250)->nullable();
             $table->string("latitud", 250)->nullable();
             $table->string("longitud", 250)->nullable();
-            $table->integer("store_id")->nullable();
+            $table->integer("store_id")->nullable(); */
             $table->timestamps();
         });
     }

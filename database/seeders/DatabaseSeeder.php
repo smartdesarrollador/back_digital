@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
             MediosSeeder::class,
             MisionSeeder::class,
             CarouselSeeder::class,
+            ClientesSeeder::class,
         ]);
     }
 }
