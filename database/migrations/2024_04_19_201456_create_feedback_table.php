@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id("id_feedback");
             $table->text('reaction')->nullable();
             $table->string("message", 250)->nullable();
-            $table->dateTime('date', precision: 0);
-            $table->time('time', precision: 0);
+            $table->dateTime('date', precision: 0)->nullable();
+            $table->time('time', precision: 0)->nullable();
             $table->unsignedBigInteger("inscripciones_id")->nullable();
             $table->foreign("inscripciones_id")->references("id_inscripciones")->on("inscripciones")->onDelete("set null");
 

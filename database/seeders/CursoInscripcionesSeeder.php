@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CursoInscripcionesSeeder extends Seeder
 {
@@ -12,6 +13,11 @@ class CursoInscripcionesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+         DB::table('curso_inscripciones')->insert([
+            'inscripciones_id' => 1,
+            'cursos_id' => 1,
+            'cantidad' => 1,
+            'item_descripcion' => "Lorem ipsum dolor sit amet consectetur adipisicing", 
+        ]);
     }
 }

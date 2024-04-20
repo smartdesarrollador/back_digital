@@ -45,6 +45,13 @@ class DatabaseSeeder extends Seeder
             MisionSeeder::class,
             CarouselSeeder::class,
             ClientesSeeder::class,
+            TipoCursosSeeder::class,
+            EstadoInscripcionesSeeder::class,
+            CursosSeeder::class,
+            InscripcionesSeeder::class,
+            CursoInscripcionesSeeder::class,
+            FeedbackSeeder::class,
+
         ]);
     }
 }
