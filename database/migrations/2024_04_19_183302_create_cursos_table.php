@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->id();
+            $table->id("id_cursos");
             $table->string("nombre_curso", 250)->nullable();
             $table->integer("descripcion_curso")->nullable();
             $table->string("duracion", 250)->nullable();
@@ -20,15 +20,15 @@ return new class extends Migration
             $table->string("maestro", 250)->nullable();
             $table->string("curso_observaciones", 250)->nullable();
             $table->float("precio")->nullable();
-            $table->float("precio_tachado")->nullable();
+            $table->unsignedBigInteger("tipo_curso_id")->nullable();
+            $table->foreign("tipo_curso_id")->references("id_tipo_curso")->on("tipo_curso")->onDelete("set null");
+            /* $table->float("precio_tachado")->nullable();
             $table->float("precio_descuento")->nullable();
             $table->string("stock", 250)->nullable();
             $table->string("estado", 250)->nullable();
             $table->integer("posicion")->nullable();
             $table->integer("acumulaNPuntos")->nullable();
-            $table->unsignedBigInteger("tipo_curso_id")->nullable();
-            $table->foreign("id_tipo_curso")->references("tipo_curso_id")->on("tipo_curso")->onDelete("set null");
-            $table->float("store_id")->nullable();
+            $table->float("store_id")->nullable(); */
             $table->timestamps();
         });
     }

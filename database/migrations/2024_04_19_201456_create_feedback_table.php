@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string("message", 250)->nullable();
             $table->dateTime('date', precision: 0);
             $table->time('time', precision: 0);
-            $table->unsignedBigInteger("inscripcion_id")->nullable();
-            $table->foreign("id_inscripcion")->references("inscripcion_id")->on("inscripcion")->onDelete("set null");
+            $table->unsignedBigInteger("inscripciones_id")->nullable();
+            $table->foreign("inscripciones_id")->references("id_inscripciones")->on("inscripciones")->onDelete("set null");
 
             $table->timestamps();
         });

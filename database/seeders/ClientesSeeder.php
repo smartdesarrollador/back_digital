@@ -17,11 +17,11 @@ class ClientesSeeder extends Seeder
             'nombre' => "Johen",
             'apellido' => "Mendoza",
             'email' => "johen@testcorreo.com",
-            /* 'password' => "", */
             'dni' => "20983099",
             'celular' => "9298192912",
             'direccion' => "Av. Aviación 3541, San Borja",
-            /* 'reputacion' => "",
+            /* 'password' => "",
+            'reputacion' => "",
             'puntos' => "",
             'estado' => "",
             'fechaRegistro' => "",

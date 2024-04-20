@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TipoCursosSeeder extends Seeder
 {
@@ -12,6 +13,10 @@ class TipoCursosSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('tipo_curso')->insert([
+            'nombre' => "Informatica",
+            'descripcion' => "Lorem, ipsum dolor sit amet consectetur",
+            'imagen' => "imagen1.jpg",
+        ]);
     }
 }
