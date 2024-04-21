@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Rol;
 use App\Models\Permiso;
-use App\Models\Trabajador;
-use App\Models\TipoContrato;
-use App\Models\Contrato;
+use App\Models\TipoCurso;
+use App\Models\Curso;
+use App\Models\Inscripcion;
+use App\Models\CursoInscripcion;
+
 
 class TestConsultasController extends Controller
 {
@@ -33,9 +35,12 @@ return $todos_trabajadores; */
 /* $ContratoById = Contrato::find(3);
 return $ContratoById; */
 
-$usuarios = User::find(1);
+/* $usuarios = User::find(1);
 $roles = $usuarios->rol()->pluck('nombre')->toArray();
-return $roles;
+return $roles; */
+
+$nombreTipoCurso = TipoCurso::pluck('nombre');
+    return $nombreTipoCurso;
    
     }
 
