@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('feedbacks', function (Blueprint $table) {
             $table->id("id_feedback");
             $table->text('reaction')->nullable();
             $table->string("message", 250)->nullable();
             $table->dateTime('date', precision: 0)->nullable();
             $table->time('time', precision: 0)->nullable();
-            $table->unsignedBigInteger("inscripciones_id")->nullable();
-            $table->foreign("inscripciones_id")->references("id_inscripciones")->on("inscripciones")->onDelete("set null");
-
+            $table->unsignedBigInteger("inscripcion_id")->nullable();
+            $table->foreign("inscripcion_id")->references("id_inscripcion")->on("inscripciones")->onDelete("set null");
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('feedback');
+        Schema::dropIfExists('feedbacks');
     }
 };

@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('curso_inscripciones', function (Blueprint $table) {
-            $table->id("id_curso_inscripciones");
-            $table->unsignedBigInteger("inscripciones_id")->nullable();
-            $table->foreign("inscripciones_id")->references("id_inscripciones")->on("inscripciones")->onDelete("set null");
-            $table->unsignedBigInteger("cursos_id")->nullable();
-            $table->foreign("cursos_id")->references("id_cursos")->on("cursos")->onDelete("set null");
+            $table->id("id_curso_inscripcion");
+            $table->unsignedBigInteger("inscripcion_id")->nullable();
+            $table->foreign("inscripcion_id")->references("id_inscripcion")->on("inscripciones")->onDelete("set null");
+            $table->unsignedBigInteger("curso_id")->nullable();
+            $table->foreign("curso_id")->references("id_curso")->on("cursos")->onDelete("set null");
             $table->integer("cantidad")->nullable();
             $table->string("item_descripcion", 250)->nullable();
 

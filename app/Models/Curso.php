@@ -14,7 +14,7 @@ class Curso extends Model
 
     protected $table = 'cursos';
 
-    protected $primaryKey = 'id_cursos';
+    protected $primaryKey = 'id_curso';
 
     public function tipo_cursos()
     {
@@ -23,6 +23,6 @@ class Curso extends Model
 
     public function inscripcion()
     {
-        return $this->belongsToMany(Inscripcion::class, 'curso_inscripcion', 'id_cursos', 'id_inscripcion');
+        return $this->belongsToMany(Inscripcion::class, 'curso_inscripciones', 'id_curso', 'id_inscripcion');
     }
 }

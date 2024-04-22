@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('inscripciones', function (Blueprint $table) {
-            $table->id("id_inscripciones");
-            $table->unsignedBigInteger("clientes_id")->nullable();
-            $table->foreign("clientes_id")->references("id_clientes")->on("clientes")->onDelete("set null");
+            $table->id("id_inscripcion");
+            $table->unsignedBigInteger("cliente_id")->nullable();
+            $table->foreign("cliente_id")->references("id_cliente")->on("clientes")->onDelete("set null");
             $table->string("telefono", 250)->nullable();
             $table->date('fecha_inscripcion')->nullable();
             $table->float("precio_total")->nullable();

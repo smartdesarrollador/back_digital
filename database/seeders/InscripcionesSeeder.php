@@ -14,7 +14,7 @@ class InscripcionesSeeder extends Seeder
     public function run(): void
     {
         DB::table('inscripciones')->insert([
-            'clientes_id' => 1,
+            'cliente_id' => 1,
             'telefono' => "928238817",
             'fecha_inscripcion' => "2023-05-01",
             'precio_total' => 1000,

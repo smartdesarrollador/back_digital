@@ -9,7 +9,7 @@ class CursoInscripcion extends Model
 {
     use HasFactory;
 
-     protected $table = 'curso_inscripcion';
+     protected $table = 'curso_inscripciones';
 
     protected $primaryKey = 'id_curso_inscripcion';
 }

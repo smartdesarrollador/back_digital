@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Test;
 
+use Illuminate\Support\Facades\DB;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -39,9 +41,25 @@ return $ContratoById; */
 $roles = $usuarios->rol()->pluck('nombre')->toArray();
 return $roles; */
 
-$nombreTipoCurso = TipoCurso::pluck('nombre');
-    return $nombreTipoCurso;
+/* $nombreTipoCurso = TipoCurso::pluck('nombre');
+    return $nombreTipoCurso; */
    
+/* $cursoConCategoria = DB::table('cursos')
+    ->join('tipo_cursos', 'cursos.tipo_curso_id', '=', 'tipo_cursos.id_tipo_curso')
+    ->select('cursos.nombre as nombre_curso', 'tipo_cursos.nombre as nombre_tipo_curso')
+    ->where('cursos.id_curso', 1)
+    ->first();
+return $cursoConCategoria; */
+
+$fechaPedido = DB::table('cursos')
+    ->join('curso_inscripciones', 'cursos.id_curso', '=', 'curso_inscripciones.curso_id')
+    ->join('inscripciones', 'curso_inscripciones.inscripcion_id', '=', 'inscripciones.id_inscripcion')
+    ->where('cursos.id_curso', 1)
+    ->select('inscripciones.fecha_inscripcion')
+    ->first();
+    return $fechaPedido;
+
+
     }
 
 }

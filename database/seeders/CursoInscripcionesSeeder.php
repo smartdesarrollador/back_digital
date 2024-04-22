@@ -14,8 +14,8 @@ class CursoInscripcionesSeeder extends Seeder
     public function run(): void
     {
          DB::table('curso_inscripciones')->insert([
-            'inscripciones_id' => 1,
-            'cursos_id' => 1,
+            'inscripcion_id' => 1,
+            'curso_id' => 1,
             'cantidad' => 1,
             'item_descripcion' => "Lorem ipsum dolor sit amet consectetur adipisicing", 
         ]);

@@ -13,8 +13,8 @@ class EstadoInscripcionesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('estado_inscripcion')->insert([
-            'nombre_estado' => "true",
+        DB::table('estado_inscripciones')->insert([
+            'estado' => "true",
         ]);
     }
 }

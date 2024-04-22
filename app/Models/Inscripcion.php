@@ -16,11 +16,11 @@ class Inscripcion extends Model
 
     protected $table = 'inscripciones';
 
-    protected $primaryKey = 'id_inscripciones';
+    protected $primaryKey = 'id_inscripcion';
 
     public function clientes()
     {
-        return $this->belongsTo(Cliente::class, 'clientes_id', 'id_clientes');
+        return $this->belongsTo(Cliente::class, 'cliente_id', 'id_cliente');
     }
 
      public function feedback()
@@ -30,6 +30,6 @@ class Inscripcion extends Model
 
     public function cursos()
     {
-        return $this->belongsToMany(Curso::class, 'curso_inscripcion', 'id_cursos', 'id_inscripciones');
+        return $this->belongsToMany(Curso::class, 'curso_inscripciones', 'id_curso', 'id_inscripcion');
     }
 }
