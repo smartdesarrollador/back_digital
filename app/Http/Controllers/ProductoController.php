@@ -35,4 +35,21 @@ class ProductoController extends Controller
 
         return response()->json($producto, 200);
     }
+
+    public function update(ProductoRequest $request,$id){
+        $id=Producto::find($id);
+        $id->update($request->only('nombre','descripcion','precio'));
+        return response()->json([
+            'message'=>"Registro actualizado satisfactoriamente",
+            'id'=>$id
+        ],Response::HTTP_CREATED);
+    }
+
+    public function destroy($id){
+        $id=Producto::find($id);
+        $id->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+    }
 }
