@@ -11,25 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inscripciones', function (Blueprint $table) {
-            $table->id("id_inscripcion");
+        Schema::create('pedidos', function (Blueprint $table) {
+            $table->id("id_pedido");
             $table->unsignedBigInteger("cliente_id")->nullable();
             $table->foreign("cliente_id")->references("id_cliente")->on("clientes")->onDelete("set null");
             $table->string("telefono", 250)->nullable();
-            $table->date('fecha_inscripcion')->nullable();
+            $table->date('fecha_pedido')->nullable();
             $table->float("precio_total")->nullable();
-            $table->time('horario_inscripcion', precision: 0);
-            /* $table->unsignedBigInteger("estado_inscripcion_id")->nullable();
-            $table->foreign("id_estado_inscripcion")->references("estado_inscripcion_id")->on("estado_inscripcion")->onDelete("set null");
+            $table->time('horario_pedido', precision: 0);
+            /* $table->unsignedBigInteger("estado_pedido_id")->nullable();
+            $table->foreign("id_estado_pedido")->references("estado_pedido_id")->on("estado_pedido")->onDelete("set null");
             $table->string("card_number", 250)->nullable();
-            $table->string("inscripcion_observaciones", 250)->nullable();
+            $table->string("pedido_observaciones", 250)->nullable();
              $table->date('date_time')->nullable();
              $table->unsignedBigInteger("locales_id")->nullable();
             $table->foreign("id_locales")->references("local_id")->on("locales")->onDelete("set null");
             $table->float("precio_con_descuento")->nullable();
             $table->string("codigo_cupon", 250)->nullable();
             $table->string("estado_descuento", 250)->nullable(); */
-            
             $table->timestamps();
         });
     }
@@ -39,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('inscripciones');
+        Schema::dropIfExists('pedidos');
     }
 };

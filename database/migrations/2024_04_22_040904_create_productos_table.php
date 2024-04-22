@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cursos', function (Blueprint $table) {
-            $table->id("id_curso");
+        Schema::create('productos', function (Blueprint $table) {
+            $table->id("id_producto");
             $table->string("nombre", 250)->nullable();
             $table->string("descripcion")->nullable();
             $table->string("duracion", 250)->nullable();
@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string("maestro", 250)->nullable();
             $table->string("curso_observacion", 250)->nullable();
             $table->float("precio")->nullable();
-            $table->unsignedBigInteger("tipo_curso_id")->nullable();
-            $table->foreign("tipo_curso_id")->references("id_tipo_curso")->on("tipo_cursos")->onDelete("set null");
+            $table->unsignedBigInteger("categoria_producto_id")->nullable();
+            $table->foreign("categoria_producto_id")->references("id_categoria_producto")->on("categoria_productos")->onDelete("set null");
             /* $table->float("precio_tachado")->nullable();
             $table->float("precio_descuento")->nullable();
             $table->string("stock", 250)->nullable();
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cursos');
+        Schema::dropIfExists('productos');
     }
 };

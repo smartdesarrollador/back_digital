@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Rol;
 use App\Models\Permiso;
-use App\Models\TipoCurso;
-use App\Models\Curso;
-use App\Models\Inscripcion;
-use App\Models\CursoInscripcion;
+use App\Models\CategoriaProducto;
+use App\Models\Producto;
+use App\Models\Pedido;
+use App\Models\DetallePedido;
 
 
 class TestConsultasController extends Controller
@@ -41,21 +41,21 @@ return $ContratoById; */
 $roles = $usuarios->rol()->pluck('nombre')->toArray();
 return $roles; */
 
-/* $nombreTipoCurso = TipoCurso::pluck('nombre');
-    return $nombreTipoCurso; */
+/* $nombreCategoriaProducto = CategoriaProducto::pluck('nombre');
+    return $nombreCategoriaProducto; */
    
-/* $cursoConCategoria = DB::table('cursos')
-    ->join('tipo_cursos', 'cursos.tipo_curso_id', '=', 'tipo_cursos.id_tipo_curso')
-    ->select('cursos.nombre as nombre_curso', 'tipo_cursos.nombre as nombre_tipo_curso')
-    ->where('cursos.id_curso', 1)
+/* $productoConCategoria = DB::table('productos')
+    ->join('categoria_productos', 'productos.categoria_producto_id', '=', 'categoria_productos.id_categoria_producto')
+    ->select('productos.nombre as nombre_producto', 'categoria_productos.nombre as nombre_categoria_producto')
+    ->where('productos.id_producto', 1)
     ->first();
-return $cursoConCategoria; */
+return $productoConCategoria; */
 
-$fechaPedido = DB::table('cursos')
-    ->join('curso_inscripciones', 'cursos.id_curso', '=', 'curso_inscripciones.curso_id')
-    ->join('inscripciones', 'curso_inscripciones.inscripcion_id', '=', 'inscripciones.id_inscripcion')
-    ->where('cursos.id_curso', 1)
-    ->select('inscripciones.fecha_inscripcion')
+$fechaPedido = DB::table('productos')
+    ->join('detalle_pedidos', 'productos.id_producto', '=', 'detalle_pedidos.producto_id')
+    ->join('pedidos', 'detalle_pedidos.pedido_id', '=', 'pedidos.id_pedido')
+    ->where('productos.id_producto', 1)
+    ->select('pedidos.fecha_pedido')
     ->first();
     return $fechaPedido;
 

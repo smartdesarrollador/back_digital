@@ -18,7 +18,7 @@ class FeedbackSeeder extends Seeder
             'message' => "Lorem ipsum dolor sit amet consectetur adipisicing elit",
             'date' => "2023-05-01",
             'time' => null,
-            'inscripcion_id' => 1, 
+            'pedido_id' => 1, 
         ]);
     }
 }

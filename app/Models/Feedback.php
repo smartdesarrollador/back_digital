@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\Inscripcion;
+use App\Models\Pedido;
 
 class Feedback extends Model
 {
@@ -15,8 +15,8 @@ class Feedback extends Model
 
     protected $primaryKey = 'id_feedback';
 
-    public function inscripciones()
+    public function pedidos()
     {
-        return $this->belongsTo(Inscripcion::class, 'inscripcion_id', 'id_inscripcion');
+        return $this->belongsTo(Pedido::class, 'pedido_id', 'id_pedido');
     }
 }

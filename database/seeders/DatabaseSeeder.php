@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\ActividadEconomica;
+use App\Models\Feedback;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -45,13 +46,13 @@ class DatabaseSeeder extends Seeder
             MisionSeeder::class,
             CarouselSeeder::class,
             ClientesSeeder::class,
-            TipoCursosSeeder::class,
-            EstadoInscripcionesSeeder::class,
-            CursosSeeder::class,
-            InscripcionesSeeder::class,
-            CursoInscripcionesSeeder::class,
+            CategoriaProductoSeeder::class,
+            EstadoPedidoSeeder::class,
+            ProductoSeeder::class,
+            PedidoSeeder::class,
+            DetallePedidoSeeder::class,
             FeedbackSeeder::class,
-
+            
         ]);
     }
 }

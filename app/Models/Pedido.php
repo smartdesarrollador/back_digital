@@ -7,16 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Cliente;
 use App\Models\Feedback;
-use App\Models\Curso;
+use App\Models\Producto;
 
-
-class Inscripcion extends Model
+class Pedido extends Model
 {
     use HasFactory;
 
-    protected $table = 'inscripciones';
+    protected $table = 'pedidos';
 
-    protected $primaryKey = 'id_inscripcion';
+    protected $primaryKey = 'id_pedido';
 
     public function clientes()
     {
@@ -28,8 +27,8 @@ class Inscripcion extends Model
         return $this->hasMany(Feedback::class, 'feedback_id', 'id_feedback');
     }
 
-    public function cursos()
+    public function productos()
     {
-        return $this->belongsToMany(Curso::class, 'curso_inscripciones', 'id_curso', 'id_inscripcion');
+        return $this->belongsToMany(Producto::class, 'detalle_pedido', 'id_producto', 'id_pedido');
     }
 }
