@@ -67,15 +67,6 @@ class ProductoController extends Controller
         $producto= new Producto();
 
         if ($request->hasFile('imagen')) {
-
-            $nombre = $request->input('nombre');
-            $descripcion = $request->input('descripcion');
-            $duracion = $request->input('duracion');
-            $maestro = $request->input('maestro');
-            $observacion = $request->input('observacion');
-            $precio = $request->input('precio');
-            $categoria_producto_id = $request->input('categoria_producto_id');
-
             $completeFileName = $request->file('imagen')->getClientOriginalName();
             $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
             $extenshion = $request->file('imagen')->getClientOriginalExtension();
@@ -83,18 +74,11 @@ class ProductoController extends Controller
            //$path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
            $path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
-            $producto->nombre = $nombre;
-            $producto->descripcion = $descripcion;
-            $producto->duracion = $duracion;
-            $producto->imagen = $compPic;
-            $producto->ruta_imagen = $this->urlAssets.'/'.$compPic; 
-            $producto->maestro = $maestro;
-            $producto->observacion = $observacion;
-            $producto->precio = $precio;
-            $producto->categoria_producto_id = $categoria_producto_id;
+        $producto->imagen = $compPic;
+        $producto->ruta_imagen = $this->urlAssets.'/'.$compPic; 
         }
         if ($producto->save()) {
-            return ['status' => true, 'message' => 'Datos guardados con exito'];
+            return ['status' => true, 'message' => 'Archivo guardado con exito'];
         } else {
             return ['status' => false, 'message' => 'Something Went Wrong'];
         }
