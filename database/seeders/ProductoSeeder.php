@@ -20,7 +20,7 @@ class ProductoSeeder extends Seeder
             'duracion' => "1 año",
             'imagen' => "imagen1.jpg",
             'maestro' => "maestro1",
-            'curso_observacion' => "Lorem ipsum dolor sit amet consectetur",
+            'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 1,
         ]);
@@ -31,7 +31,7 @@ class ProductoSeeder extends Seeder
             'duracion' => "2 año",
             'imagen' => "imagen2.jpg",
             'maestro' => "maestro2",
-            'curso_observacion' => "Lorem ipsum dolor sit amet consectetur",
+            'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 1,
         ]);
@@ -42,7 +42,7 @@ class ProductoSeeder extends Seeder
             'duracion' => "1 año",
             'imagen' => "imagen1.jpg",
             'maestro' => "maestro1",
-            'curso_observacion' => "Lorem ipsum dolor sit amet consectetur",
+            'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 2,
         ]);
@@ -53,7 +53,7 @@ class ProductoSeeder extends Seeder
             'duracion' => "2 año",
             'imagen' => "imagen2.jpg",
             'maestro' => "maestro2",
-            'curso_observacion' => "Lorem ipsum dolor sit amet consectetur",
+            'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 2,
         ]);

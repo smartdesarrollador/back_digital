@@ -18,13 +18,8 @@ use App\Http\Controllers\Test\TestConsultasController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MisionController;
 use App\Http\Controllers\CarouselController;
-
-
-
-
-
-
-
+use App\Http\Controllers\ProductoController;
+use App\Models\Producto;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,3 +96,9 @@ Route::get('contactanos',function(){
 })->name('contactanos');
 
 Route::post('enviar_correo',[ContactController::class,'sendContactForm']);
+
+
+// Crud Productos
+Route::get('productos', [ProductoController::class, 'index']);
+Route::post('productos', [ProductoController::class, 'store']);
+Route::get('productos/{id}', [ProductoController::class, 'show']);

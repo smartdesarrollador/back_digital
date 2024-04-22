@@ -16,6 +16,8 @@ class Producto extends Model
 
     protected $primaryKey = 'id_producto';
 
+     protected $fillable = ['nombre','descripcion','duracion','imagen','maestro','observacion','precio','categoria_producto_id'];
+
     public function categoria_productos()
     {
         return $this->belongsTo(CategoriaProducto::class, 'categoria_producto_id', 'id_categoria_producto');

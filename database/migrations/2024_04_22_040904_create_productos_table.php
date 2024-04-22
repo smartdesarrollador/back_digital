@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("duracion", 250)->nullable();
             $table->string("imagen", 250)->nullable();
             $table->string("maestro", 250)->nullable();
-            $table->string("curso_observacion", 250)->nullable();
+            $table->string("observacion", 250)->nullable();
             $table->float("precio")->nullable();
             $table->unsignedBigInteger("categoria_producto_id")->nullable();
             $table->foreign("categoria_producto_id")->references("id_categoria_producto")->on("categoria_productos")->onDelete("set null");
