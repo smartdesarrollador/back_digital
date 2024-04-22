@@ -103,6 +103,14 @@ class ProductoController extends Controller
      public function updateFile(Request $request)
 {
     $id = $request->input('id_producto');
+    $nombre = $request->input('nombre');
+    $descripcion = $request->input('descripcion');
+    $duracion = $request->input('duracion');
+    $maestro = $request->input('maestro');
+    $observacion = $request->input('observacion');
+    $precio = $request->input('precio');
+    $categoria_producto_id = $request->input('categoria_producto_id');
+
     $producto = Producto::find($id);
 
     if (!$producto) {
@@ -117,42 +125,31 @@ class ProductoController extends Controller
         
          //$path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
          $path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
-
-        
-        
-
-        
+ 
         if ($producto->imagen) {
-            
             $this->deleteFile($producto->imagen);
         }
 
+        $producto->nombre = $nombre;
+        $producto->descripcion = $descripcion;
+        $producto->duracion = $duracion;
         $producto->imagen = $compPic;
-        
         $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
-
-       
+        $producto->maestro = $maestro;
+        $producto->observacion = $observacion;
+        $producto->precio = $precio;
+        $producto->categoria_producto_id = $categoria_producto_id;
 
     }
 
-    
-
     if ($producto->save()) {
-        return ['status' => true, 'message' => 'Post Updated Successfully '];
+        return ['status' => true, 'message' => 'Datos actualizados con exito'];
     } else {
         return ['status' => false, 'message' => 'Something Went Wrong'];
     }
 }
 
- public function destroyFile($id){
-        $producto=Producto::find($id);
-        $this->deleteFile($producto->imagen);
-        $producto->delete();
-        return response()->json([
-            'message'=>"Registro eliminado satisfactoriamente"
-        ],Response::HTTP_OK);
-    }
-
+// Eliminar imagen de carpeta de imagenes
     public function deleteFile($fileName)
 {
     //$filePath = $this->urlAssetsProd . '/' . $fileName;
@@ -169,4 +166,13 @@ class ProductoController extends Controller
         return true; 
     }
 }
+
+public function destroyFile($id){
+        $producto=Producto::find($id);
+        $this->deleteFile($producto->imagen);
+        $producto->delete();
+        return response()->json([
+            'message'=>"Registro eliminado satisfactoriamente"
+        ],Response::HTTP_OK);
+    }
 }
