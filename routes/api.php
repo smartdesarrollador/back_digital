@@ -104,3 +104,5 @@ Route::post('productos', [ProductoController::class, 'store']);
 Route::get('productos/{id}', [ProductoController::class, 'show']);
 Route::put('productos/{id}', [ProductoController::class, 'update']);
 Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
+Route::post('productos/subir', [ProductoController::class, 'file']);
+Route::post('productos/update', [ProductoController::class, 'updateFile']);
