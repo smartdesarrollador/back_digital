@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class MisionSeeder extends Seeder
 {
@@ -14,6 +15,8 @@ class MisionSeeder extends Seeder
      */
     public function run(): void
     {
+        $horaActual = Carbon::now();
+
         //
         DB::table('mision')->insert([
             'id_mision' => 1,
@@ -23,6 +26,8 @@ class MisionSeeder extends Seeder
             'contenido_mision' => 'Asesorar, capacitar y formar profesionales en analitica de datos mediante el uso de software más requeridas del mercado',
             'contenido_vision' => 'Ser una empresa líder en capacitación y asesoría del mercado analítico y transformación digital',
             'contenido_valores' => 'Compromiso, enfoque, responsabilidad y confidencialidad',
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
         ]);
     }
 }

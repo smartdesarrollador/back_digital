@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\ActividadEconomica;
 use App\Models\Feedback;
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $horaActual = Carbon::now();
+        
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

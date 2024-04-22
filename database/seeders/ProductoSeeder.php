@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ProductoSeeder extends Seeder
 {
@@ -14,6 +15,8 @@ class ProductoSeeder extends Seeder
      */
     public function run(): void
     {
+        $horaActual = Carbon::now();
+
         DB::table('productos')->insert([
             'nombre' => "Analitica Digital",
             'descripcion' => "Lorem ipsum dolor sit amet consectetur",
@@ -23,6 +26,8 @@ class ProductoSeeder extends Seeder
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 1,
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
@@ -34,6 +39,8 @@ class ProductoSeeder extends Seeder
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 1,
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
@@ -45,6 +52,8 @@ class ProductoSeeder extends Seeder
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 2,
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
@@ -56,6 +65,8 @@ class ProductoSeeder extends Seeder
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 2,
+            'created_at' => $horaActual,
+            'updated_at' => $horaActual,
         ]);
     }
 }
