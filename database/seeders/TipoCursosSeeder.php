@@ -14,9 +14,15 @@ class TipoCursosSeeder extends Seeder
     public function run(): void
     {
         DB::table('tipo_cursos')->insert([
-            'nombre' => "Informatica",
+            'nombre' => "Cursos",
             'descripcion' => "Lorem, ipsum dolor sit amet consectetur",
             'imagen' => "imagen1.jpg",
+        ]);
+
+        DB::table('tipo_cursos')->insert([
+            'nombre' => "Especialidades",
+            'descripcion' => "Lorem, ipsum dolor sit amet consectetur",
+            'imagen' => "imagen2.jpg",
         ]);
     }
 }
