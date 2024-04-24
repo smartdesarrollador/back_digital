@@ -69,9 +69,10 @@ class ProductoController extends Controller
         if ($request->hasFile('imagen')) {
 
             $nombre = $request->input('nombre');
+            $resumen = $request->input('resumen');
             $descripcion = $request->input('descripcion');
             $duracion = $request->input('duracion');
-            $maestro = $request->input('maestro');
+            /* $maestro = $request->input('maestro'); */
             $observacion = $request->input('observacion');
             $precio = $request->input('precio');
             $categoria_producto_id = $request->input('categoria_producto_id');
@@ -84,11 +85,12 @@ class ProductoController extends Controller
            $path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
             $producto->nombre = $nombre;
+            $producto->resumen = $resumen;
             $producto->descripcion = $descripcion;
             $producto->duracion = $duracion;
             $producto->imagen = $compPic;
             $producto->ruta_imagen = $this->urlAssets.'/'.$compPic; 
-            $producto->maestro = $maestro;
+            /* $producto->maestro = $maestro; */
             $producto->observacion = $observacion;
             $producto->precio = $precio;
             $producto->categoria_producto_id = $categoria_producto_id;
@@ -104,9 +106,10 @@ class ProductoController extends Controller
 {
     $id = $request->input('id_producto');
     $nombre = $request->input('nombre');
+    $resumen = $request->input('resumen');
     $descripcion = $request->input('descripcion');
     $duracion = $request->input('duracion');
-    $maestro = $request->input('maestro');
+    /* $maestro = $request->input('maestro'); */
     $observacion = $request->input('observacion');
     $precio = $request->input('precio');
     $categoria_producto_id = $request->input('categoria_producto_id');
@@ -131,20 +134,22 @@ class ProductoController extends Controller
         }
 
         $producto->nombre = $nombre;
+        $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
         $producto->duracion = $duracion;
         $producto->imagen = $compPic;
         $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
-        $producto->maestro = $maestro;
+        /* $producto->maestro = $maestro; */
         $producto->observacion = $observacion;
         $producto->precio = $precio;
         $producto->categoria_producto_id = $categoria_producto_id;
 
     }else{
          $producto->nombre = $nombre;
+         $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
         $producto->duracion = $duracion;
-        $producto->maestro = $maestro;
+        /* $producto->maestro = $maestro; */
         $producto->observacion = $observacion;
         $producto->precio = $precio;
         $producto->categoria_producto_id = $categoria_producto_id;

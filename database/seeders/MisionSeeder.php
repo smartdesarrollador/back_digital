@@ -20,7 +20,7 @@ class MisionSeeder extends Seeder
         //
         DB::table('mision')->insert([
             'id_mision' => 1,
-            'imagen_mision' => "imagen.jpg",
+            'imagen_mision' => "mision.jpg",
             'url_imagen_mision' => "assets/imagen/mision/mision.jpg",
             'titulo_mision' => 'Titulo Misión',
             'contenido_mision' => 'Asesorar, capacitar y formar profesionales en analitica de datos mediante el uso de software más requeridas del mercado',

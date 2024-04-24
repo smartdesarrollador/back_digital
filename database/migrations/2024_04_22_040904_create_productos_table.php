@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id("id_producto");
             $table->string("nombre", 250)->nullable();
+            $table->string("resumen", 250)->nullable();
             $table->text("descripcion")->nullable();
             $table->string("duracion", 250)->nullable();
             $table->string("imagen", 250)->nullable();
             $table->string("ruta_imagen", 250)->nullable();
-            $table->string("maestro", 250)->nullable();
+            /* $table->string("maestro", 250)->nullable(); */
             $table->string("observacion", 250)->nullable();
             $table->float("precio")->nullable();
             $table->unsignedBigInteger("categoria_producto_id")->nullable();

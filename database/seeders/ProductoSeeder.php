@@ -19,11 +19,12 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Analitica Digital",
+            'resumen' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "1 año",
-            'imagen' => "imagen1.jpg",
-            'ruta_imagen' => "assets/imagen/producto/imagen1.jpg",
-            'maestro' => "maestro1",
+            'imagen' => "producto1.jpg",
+            'ruta_imagen' => "assets/imagen/producto/producto1.jpg",
+            /* 'maestro' => "maestro1", */
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 1,
@@ -33,11 +34,12 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Marketing Digital",
+            'resumen' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "2 año",
-            'imagen' => "imagen2.jpg",
-            'ruta_imagen' => "assets/imagen/producto/imagen2.jpg",
-            'maestro' => "maestro2",
+            'imagen' => "producto2.jpg",
+            'ruta_imagen' => "assets/imagen/producto/producto2.jpg",
+            /* 'maestro' => "maestro2", */
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 1,
@@ -47,11 +49,12 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Especialidad 1",
+            'resumen' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "1 año",
-            'imagen' => "imagen3.jpg",
-            'ruta_imagen' => "assets/imagen/producto/imagen3.jpg",
-            'maestro' => "maestro1",
+            'imagen' => "producto3.jpg",
+            'ruta_imagen' => "assets/imagen/producto/producto3.jpg",
+            /* 'maestro' => "maestro1", */
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "1000",
             'categoria_producto_id' => 2,
@@ -61,11 +64,12 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Especialidad 2",
+            'resumen' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "2 año",
-            'imagen' => "imagen4.jpg",
-            'ruta_imagen' => "assets/imagen/producto/imagen4.jpg",
-            'maestro' => "maestro2",
+            'imagen' => "producto4.jpg",
+            'ruta_imagen' => "assets/imagen/producto/producto4.jpg",
+            /* 'maestro' => "maestro2", */
             'observacion' => "Lorem ipsum dolor sit amet consectetur",
             'precio' => "500",
             'categoria_producto_id' => 2,
