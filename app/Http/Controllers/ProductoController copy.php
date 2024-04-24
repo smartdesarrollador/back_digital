@@ -25,6 +25,8 @@ class ProductoController extends Controller
         return response()->json($productos, Response::HTTP_OK);
     }
 
+    
+
     public function store(ProductoRequest $request)
     {
         $productos=Producto::create($request->all());

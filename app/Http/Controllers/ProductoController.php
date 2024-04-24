@@ -25,6 +25,24 @@ class ProductoController extends Controller
         return response()->json($productos, Response::HTTP_OK);
     }
 
+    public function obtenerCursos()
+    {
+        $productos = DB::table('productos')
+            ->where('categoria_producto_id', 1)
+            ->get();
+
+        return response()->json($productos);
+    }
+
+    public function obtenerEspecialidades()
+    {
+        $productos = DB::table('productos')
+            ->where('categoria_producto_id', 2)
+            ->get();
+
+        return response()->json($productos);
+    }
+
     public function store(ProductoRequest $request)
     {
         $productos=Producto::create($request->all());

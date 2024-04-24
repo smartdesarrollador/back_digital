@@ -100,6 +100,8 @@ Route::post('enviar_correo',[ContactController::class,'sendContactForm']);
 
 // Crud Productos
 Route::get('productos', [ProductoController::class, 'index']);
+Route::get('productos/cursos', [ProductoController::class, 'obtenerCursos']);
+Route::get('productos/especialidades', [ProductoController::class, 'obtenerEspecialidades']);
 Route::post('productos', [ProductoController::class, 'store']);
 Route::get('productos/{id}', [ProductoController::class, 'show']);
 Route::put('productos/{id}', [ProductoController::class, 'update']);
