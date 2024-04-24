@@ -140,6 +140,14 @@ class ProductoController extends Controller
         $producto->precio = $precio;
         $producto->categoria_producto_id = $categoria_producto_id;
 
+    }else{
+         $producto->nombre = $nombre;
+        $producto->descripcion = $descripcion;
+        $producto->duracion = $duracion;
+        $producto->maestro = $maestro;
+        $producto->observacion = $observacion;
+        $producto->precio = $precio;
+        $producto->categoria_producto_id = $categoria_producto_id;
     }
 
     if ($producto->save()) {

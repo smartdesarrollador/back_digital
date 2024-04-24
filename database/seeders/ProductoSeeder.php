@@ -19,7 +19,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Analitica Digital",
-            'descripcion' => "Lorem ipsum dolor sit amet consectetur",
+            'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "1 año",
             'imagen' => "imagen1.jpg",
             'ruta_imagen' => "assets/imagen/producto/imagen1.jpg",
@@ -33,7 +33,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Marketing Digital",
-            'descripcion' => "Lorem ipsum dolor sit amet consectetur",
+            'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "2 año",
             'imagen' => "imagen2.jpg",
             'ruta_imagen' => "assets/imagen/producto/imagen2.jpg",
@@ -47,7 +47,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Especialidad 1",
-            'descripcion' => "Lorem ipsum dolor sit amet consectetur",
+            'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "1 año",
             'imagen' => "imagen3.jpg",
             'ruta_imagen' => "assets/imagen/producto/imagen3.jpg",
@@ -61,7 +61,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')->insert([
             'nombre' => "Especialidad 2",
-            'descripcion' => "Lorem ipsum dolor sit amet consectetur",
+            'descripcion' => "<p>Lorem ipsum dolor sit amet consectetur</p>",
             'duracion' => "2 año",
             'imagen' => "imagen4.jpg",
             'ruta_imagen' => "assets/imagen/producto/imagen4.jpg",
