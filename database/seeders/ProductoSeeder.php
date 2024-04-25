@@ -20,60 +20,60 @@ class ProductoSeeder extends Seeder
         $descripcion = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet. Sed faucibus lectus quam, a vulputate ligula ullamcorper ac. Sed nec odio a leo hendrerit varius. Mauris vel orci at ipsum ultricies laoreet. Sed eget lectus at lectus laoreet lobortis.</p><p>&nbsp;</p><p><strong>Lorem Ipsum Dolor Sit Amet</strong></p><p>&nbsp;</p><p><strong>Pre-requisitos:</strong></p><p>&nbsp;</p><ul><li>Conocimientos de manejo de datos y/o excel básico.</li><li>&nbsp;</li></ul><p><strong>Objetivo General:</strong></p><p>&nbsp;</p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Objetivos Específicos:</strong></p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Resumen del contenido:</strong></p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>&nbsp;</li></ul><p><strong>Please note:</strong></p><ul><li>I have replaced all specific text with generic Lorem ipsum text.</li><li>I have kept the headings and subheadings the same.</li><li>I have kept the bullet points and list structure the same.</li></ul><p>I hope this is helpful! Let me know if you have any other questions.</p>";
 
         DB::table('productos')->insert([
-            'nombre' => "Analitica Digital",
-            'resumen' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.</p>",
+            'nombre' => "ANALITICA DIGITAL",
+            'resumen' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
             'descripcion' => $descripcion,
-            'duracion' => "1 año",
+            'duracion' => "4 Meses",
             'imagen' => "producto1.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto1.jpg",
             /* 'maestro' => "maestro1", */
-            'observacion' => "Lorem ipsum dolor sit amet consectetur",
-            'precio' => "1000",
+            'observacion' => "Ing. John Smith",
+            'precio' => "900",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
-            'nombre' => "Marketing Digital",
-            'resumen' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.</p>",
+            'nombre' => "MARKETING DIGITAL",
+            'resumen' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
             'descripcion' => $descripcion,
-            'duracion' => "2 año",
+            'duracion' => "3 Meses",
             'imagen' => "producto2.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto2.jpg",
             /* 'maestro' => "maestro2", */
-            'observacion' => "Lorem ipsum dolor sit amet consectetur",
-            'precio' => "500",
+            'observacion' => "Ing. Emily Johnson",
+            'precio' => "800",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
-            'nombre' => "Especialidad 1",
-            'resumen' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.</p>",
+            'nombre' => "POWER BI ADVANCED",
+            'resumen' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
             'descripcion' => $descripcion,
             'duracion' => "1 año",
             'imagen' => "producto3.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto3.jpg",
             /* 'maestro' => "maestro1", */
-            'observacion' => "Lorem ipsum dolor sit amet consectetur",
-            'precio' => "1000",
+            'observacion' => "Ing. Michael Brown",
+            'precio' => "1700",
             'categoria_producto_id' => 2,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
         ]);
 
         DB::table('productos')->insert([
-            'nombre' => "Especialidad 2",
-            'resumen' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.</p>",
+            'nombre' => "PYTHON FOR WEB SCRAPING",
+            'resumen' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed eros et elit sodales laoreet. Sed vel nibh sit amet mauris bibendum semper. Nullam ac nunc ut nunc eleifend ultrices. Morbi non nibh ac neque consectetur laoreet.",
             'descripcion' => $descripcion,
-            'duracion' => "2 año",
+            'duracion' => "1 año",
             'imagen' => "producto4.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto4.jpg",
             /* 'maestro' => "maestro2", */
-            'observacion' => "Lorem ipsum dolor sit amet consectetur",
-            'precio' => "500",
+            'observacion' => "Ing. Sophia Williams",
+            'precio' => "1900",
             'categoria_producto_id' => 2,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
