@@ -19,7 +19,10 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\MisionController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ContactoController;
 use App\Models\Producto;
+
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,3 +111,5 @@ Route::put('productos/{id}', [ProductoController::class, 'update']);
 Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
+
+Route::post('contacto',[ContactoController::class,'sendContactForm']);
