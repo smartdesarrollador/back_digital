@@ -18,8 +18,8 @@ class MisionController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = 'assets/imagen/mision';
-        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/mision';
+        $this->urlAssets = config('myconfig.url_upload_mision');
+        /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/mision'; */
     }
 
     public function index(){

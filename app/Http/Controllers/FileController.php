@@ -18,8 +18,8 @@ class FileController extends Controller
     public function __construct()
     {
         // Inicializar la variable global en el constructor
-        $this->urlAssets = 'assets/imagen/banner';
-        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/banner';
+        $this->urlAssets = config('myconfig.url_upload_banner');
+        /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/banner'; */
     }
 
     public function index(){

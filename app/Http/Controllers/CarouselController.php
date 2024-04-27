@@ -14,8 +14,9 @@ class CarouselController extends Controller
     public function __construct()
     {
         // Inicializar la variable global en el constructor
-        $this->urlAssets = 'assets/imagen/carousel';
-        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/carousel';
+        $this->urlAssets = config('myconfig.url_upload_carousel');
+        /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/carousel'; */
+
     }
 
     public function index(){
