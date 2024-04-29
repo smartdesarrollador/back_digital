@@ -30,7 +30,7 @@ $data = [
 
     $email = new ContactoEmail($nombre);
 
-    Mail::to('jeans@enfocussoluciones.com')->send($email);
+    Mail::to('enrique_sistema_5000@hotmail.com')->send($email);
 
 
 
