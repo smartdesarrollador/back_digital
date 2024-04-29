@@ -94,7 +94,7 @@ Route::post('login',[UserController::class,'login']);
 
 /* Test Envio Mail */
 Route::get('contactanos',function(){
-    Mail::to('sistemadesignstyle@gmail.com')->send(new TestContact);
+    Mail::to('prueba@iatecdigital.com')->send(new TestContact("hola"));
     return "mensaje enviado";
 })->name('contactanos');
 
@@ -111,5 +111,6 @@ Route::put('productos/{id}', [ProductoController::class, 'update']);
 Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
+
 
 Route::post('contacto',[ContactoController::class,'sendContactForm']);

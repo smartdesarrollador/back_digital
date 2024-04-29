@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\TestContact;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,4 @@ Route::get('/', function () {
 Route::get('/prueba', function () {
     return "hola";
 });
+

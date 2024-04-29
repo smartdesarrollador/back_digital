@@ -14,12 +14,14 @@ class ContactoEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $nombre;
+
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($nombre)
     {
-        //
+        $this->nombre = $nombre;
     }
 
     /**
@@ -39,7 +41,7 @@ class ContactoEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mails.contact',
+            view: 'contacto',
         );
     }
 
@@ -52,4 +54,10 @@ class ContactoEmail extends Mailable
     {
         return [];
     }
+
+    /* public function build()
+    {
+        return $this->view('contacto')
+                    ->with('nombre', $this->nombre);
+    } */
 }
