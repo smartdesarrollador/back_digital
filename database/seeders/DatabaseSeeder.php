@@ -55,6 +55,7 @@ class DatabaseSeeder extends Seeder
             PedidoSeeder::class,
             DetallePedidoSeeder::class,
             FeedbackSeeder::class,
+            ContactoSeeder::class,
             
         ]);
     }

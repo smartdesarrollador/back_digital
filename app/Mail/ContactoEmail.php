@@ -14,14 +14,14 @@ class ContactoEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $nombre;
+    public $data;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($nombre)
+    public function __construct(array $data)
     {
-        $this->nombre = $nombre;
+        $this->data = $data;
     }
 
     /**

@@ -8,29 +8,53 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactoEmail;
 use Illuminate\Support\Facades\Mail;
 
+use App\Models\Contacto;
+
 class ContactoController extends Controller
 {
      public function sendContactForm(Request $request)
     {
-        $data['nombre'] = $request->nombre;
-
-$nombre = $data['nombre'];
+        /* $data['nombre'] = $request->nombre;
+        $nombre = $data['nombre']; */
 
 
     /* Mail::send('contacto', $data, function ($message) use ($data) {
       $message->to('prueba@iatecdigital.com', $data['nombre'])
       ->subject("Titulo del Mensaje");
-    });
+    }); */
 
 $data = [
         'nombre' => $request->input('nombre'),
         'correo' => $request->input('correo'),
+        'telefono' => $request->input('telefono'),
+        'asunto' => $request->input('asunto'),
         'mensaje' => $request->input('mensaje'),
-    ]; */
+    ];
 
-    $email = new ContactoEmail($nombre);
+    $email = new ContactoEmail($data);
 
     Mail::to('enrique_sistema_5000@hotmail.com')->send($email);
+
+// Validación de datos (puedes agregar validaciones adicionales según tus necesidades)
+        /* $request->validate([
+            'nombre' => 'required|string|max:255',
+            'correo' => 'required|email|max:255',
+            'telefono' => 'nullable|string|max:255',
+            'asunto' => 'required|string|max:255',
+            'mensaje' => 'required|string',
+        ]); */
+
+        // Crear un nuevo objeto Contacto con los datos del formulario
+        $contacto = new Contacto([
+            'nombre' => $request->input('nombre'),
+            'correo' => $request->input('correo'),
+            'telefono' => $request->input('telefono'),
+            'asunto' => $request->input('asunto'),
+            'mensaje' => $request->input('mensaje'),
+        ]);
+
+        // Guardar el objeto en la base de datos
+        $contacto->save();
 
 
 
