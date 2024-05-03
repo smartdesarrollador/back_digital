@@ -113,4 +113,6 @@ Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
 
 
+Route::get('contactos', [ContactoController::class, 'index']);
 Route::post('contacto',[ContactoController::class,'sendContactForm']);
+

@@ -15,7 +15,8 @@ class ProductoController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = config('myconfig.url_upload_producto');
+        $this->urlAssets = 'assets/imagen/producto';
+        $this->urlAssetsProd = config('myconfig.url_upload_producto');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/producto'; */
     }
 
@@ -99,8 +100,8 @@ class ProductoController extends Controller
             $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
             $extenshion = $request->file('imagen')->getClientOriginalExtension();
             $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extenshion;
-           //$path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
-           $path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
+           $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
+           //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
 
             $producto->nombre = $nombre;
             $producto->resumen = $resumen;
@@ -144,8 +145,8 @@ class ProductoController extends Controller
         $extension = $request->file('imagen')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
         
-         //$path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
-         $path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
+         $path = $request->file('imagen')->move($this->urlAssetsProd, $compPic);
+         //$path = $request->file('imagen')->move(public_path($this->urlAssets), $compPic);
  
         if ($producto->imagen) {
             $this->deleteFile($producto->imagen);
@@ -183,8 +184,8 @@ class ProductoController extends Controller
 // Eliminar imagen de carpeta de imagenes
     public function deleteFile($fileName)
 {
-    //$filePath = $this->urlAssetsProd . '/' . $fileName;
-    $filePath = public_path($this->urlAssets .'/'. $fileName);
+    $filePath = $this->urlAssetsProd . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
 
     
     if (file_exists($filePath)) {

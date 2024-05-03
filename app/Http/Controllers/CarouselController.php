@@ -14,7 +14,8 @@ class CarouselController extends Controller
     public function __construct()
     {
         // Inicializar la variable global en el constructor
-        $this->urlAssets = config('myconfig.url_upload_carousel');
+        $this->urlAssets = 'assets/imagen/carousel';
+        $this->urlAssetsProd = config('myconfig.url_upload_carousel');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/carousel'; */
 
     }
@@ -33,8 +34,8 @@ class CarouselController extends Controller
             $fileNameOnly = pathinfo($completeFileName, PATHINFO_FILENAME);
             $extenshion = $request->file('nombre_carousel')->getClientOriginalExtension();
             $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extenshion;
-           //$path = $request->file('nombre_carousel')->move($this->urlAssetsProd, $compPic);
-           $path = $request->file('nombre_carousel')->move(public_path($this->urlAssets), $compPic);
+           $path = $request->file('nombre_carousel')->move($this->urlAssetsProd, $compPic);
+           //$path = $request->file('nombre_carousel')->move(public_path($this->urlAssets), $compPic);
 
         $post->nombre_carousel = $compPic;
         $post->url_carousel = $this->urlAssets.'/'.$compPic; 
@@ -61,8 +62,8 @@ class CarouselController extends Controller
         $extension = $request->file('nombre_carousel')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
         
-         //$path = $request->file('nombre_carousel')->move($this->urlAssetsProd, $compPic);
-         $path = $request->file('nombre_carousel')->move(public_path($this->urlAssets), $compPic);
+         $path = $request->file('nombre_carousel')->move($this->urlAssetsProd, $compPic);
+         //$path = $request->file('nombre_carousel')->move(public_path($this->urlAssets), $compPic);
 
         
         
@@ -101,8 +102,8 @@ class CarouselController extends Controller
 
     public function deleteFile($fileName)
 {
-    //$filePath = $this->urlAssetsProd . '/' . $fileName;
-    $filePath = public_path($this->urlAssets .'/'. $fileName);
+    $filePath = $this->urlAssetsProd . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
 
     
     if (file_exists($filePath)) {

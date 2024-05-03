@@ -18,7 +18,8 @@ class MisionController extends Controller
 
     public function __construct()
     {
-        $this->urlAssets = config('myconfig.url_upload_mision');
+        $this->urlAssets = 'assets/imagen/mision';
+        $this->urlAssetsProd = config('myconfig.url_upload_mision');
         /* $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/mision'; */
     }
 
@@ -51,8 +52,8 @@ class MisionController extends Controller
         $extension = $request->file('imagen_mision')->getClientOriginalExtension();
         $compPic = str_replace('', '_', $fileNameOnly) . '-' . rand() . '_' . time() . '.' . $extension;
         
-         //$path = $request->file('imagen_mision')->move($this->urlAssetsProd, $compPic);
-         $path = $request->file('imagen_mision')->move(public_path($this->urlAssets), $compPic);
+         $path = $request->file('imagen_mision')->move($this->urlAssetsProd, $compPic);
+         //$path = $request->file('imagen_mision')->move(public_path($this->urlAssets), $compPic);
 
         
         
@@ -84,8 +85,8 @@ class MisionController extends Controller
 
     public function deleteFile($fileName)
 {
-    //$filePath = $this->urlAssetsProd . '/' . $fileName;
-    $filePath = public_path($this->urlAssets .'/'. $fileName);
+    $filePath = $this->urlAssetsProd . '/' . $fileName;
+    //$filePath = public_path($this->urlAssets .'/'. $fileName);
 
     
     if (file_exists($filePath)) {

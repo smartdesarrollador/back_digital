@@ -15,8 +15,11 @@ class ProductoController extends Controller
 
     public function __construct()
     {
+        /* $this->urlAssets = 'assets/imagen/producto';
+        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/producto'; */
+
         $this->urlAssets = 'assets/imagen/producto';
-        $this->urlAssetsProd = '/home1/iatecdigital/back.iatecdigital.com/assets/imagen/producto';
+        $this->urlAssetsProd = config('myconfig.url_upload_producto');
     }
 
    public function index()

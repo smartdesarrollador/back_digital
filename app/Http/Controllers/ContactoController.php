@@ -7,11 +7,21 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactoEmail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Response;
 
 use App\Models\Contacto;
 
 class ContactoController extends Controller
 {
+
+     public function index()
+    {
+        $contactos = Contacto::all();
+        return response()->json($contactos, Response::HTTP_OK);
+    }
+
+
+
      public function sendContactForm(Request $request)
     {
         /* $data['nombre'] = $request->nombre;
