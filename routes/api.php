@@ -20,6 +20,7 @@ use App\Http\Controllers\MisionController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\TestimonioController;
 use App\Models\Producto;
 
 use Illuminate\Support\Facades\Mail;
@@ -112,7 +113,19 @@ Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
 
-
+// Contacto
 Route::get('contactos', [ContactoController::class, 'index']);
 Route::post('contacto',[ContactoController::class,'sendContactForm']);
+
+// Crud Testimonio
+Route::get('testimonios', [TestimonioController::class, 'index']);
+Route::post('testimonios', [TestimonioController::class, 'store']);
+Route::get('testimonios/{id}', [TestimonioController::class, 'show']);
+Route::put('testimonios/{id}', [TestimonioController::class, 'update']);
+Route::delete('testimonios/{id}', [TestimonioController::class, 'destroy']);
+Route::post('testimonios/subir', [TestimonioController::class, 'file']);
+Route::post('testimonios/update', [TestimonioController::class, 'updateFile']);
+
+
+
 
