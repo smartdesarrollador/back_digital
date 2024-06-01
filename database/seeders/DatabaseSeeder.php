@@ -56,6 +56,7 @@ class DatabaseSeeder extends Seeder
             DetallePedidoSeeder::class,
             FeedbackSeeder::class,
             ContactoSeeder::class,
+            TestimonioSeeder::class,
             
         ]);
     }
