@@ -22,6 +22,8 @@ return new class extends Migration
             /* $table->string("maestro", 250)->nullable(); */
             $table->string("observacion", 250)->nullable();
             $table->float("precio")->nullable();
+            $table->string("destacado", 20)->nullable();
+            /* $table->boolean('destacado')->default(false); */
             $table->unsignedBigInteger("categoria_producto_id")->nullable();
             $table->foreign("categoria_producto_id")->references("id_categoria_producto")->on("categoria_productos")->onDelete("set null");
             /* $table->float("precio_tachado")->nullable();

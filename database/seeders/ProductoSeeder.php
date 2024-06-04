@@ -29,6 +29,7 @@ class ProductoSeeder extends Seeder
             /* 'maestro' => "maestro1", */
             'observacion' => "Ing. John Smith",
             'precio' => "900",
+            'destacado' => "false",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -44,6 +45,7 @@ class ProductoSeeder extends Seeder
             /* 'maestro' => "maestro2", */
             'observacion' => "Ing. Emily Johnson",
             'precio' => "800",
+            'destacado' => "false",
             'categoria_producto_id' => 1,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -59,6 +61,7 @@ class ProductoSeeder extends Seeder
             /* 'maestro' => "maestro1", */
             'observacion' => "Ing. Michael Brown",
             'precio' => "1700",
+            'destacado' => "false",
             'categoria_producto_id' => 2,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,
@@ -74,6 +77,7 @@ class ProductoSeeder extends Seeder
             /* 'maestro' => "maestro2", */
             'observacion' => "Ing. Sophia Williams",
             'precio' => "1900",
+            'destacado' => "false",
             'categoria_producto_id' => 2,
             'created_at' => $horaActual,
             'updated_at' => $horaActual,

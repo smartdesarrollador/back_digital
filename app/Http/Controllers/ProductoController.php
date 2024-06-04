@@ -94,6 +94,7 @@ class ProductoController extends Controller
             /* $maestro = $request->input('maestro'); */
             $observacion = $request->input('observacion');
             $precio = $request->input('precio');
+            $destacado = $request->input('destacado');
             $categoria_producto_id = $request->input('categoria_producto_id');
 
             $completeFileName = $request->file('imagen')->getClientOriginalName();
@@ -112,6 +113,7 @@ class ProductoController extends Controller
             /* $producto->maestro = $maestro; */
             $producto->observacion = $observacion;
             $producto->precio = $precio;
+            $producto->destacado = $destacado;
             $producto->categoria_producto_id = $categoria_producto_id;
         }
         if ($producto->save()) {
@@ -131,6 +133,7 @@ class ProductoController extends Controller
     /* $maestro = $request->input('maestro'); */
     $observacion = $request->input('observacion');
     $precio = $request->input('precio');
+    $destacado = $request->input('destacado');
     $categoria_producto_id = $request->input('categoria_producto_id');
 
     $producto = Producto::find($id);
@@ -161,6 +164,7 @@ class ProductoController extends Controller
         /* $producto->maestro = $maestro; */
         $producto->observacion = $observacion;
         $producto->precio = $precio;
+        $producto->destacado = $destacado;
         $producto->categoria_producto_id = $categoria_producto_id;
 
     }else{
@@ -171,6 +175,7 @@ class ProductoController extends Controller
         /* $producto->maestro = $maestro; */
         $producto->observacion = $observacion;
         $producto->precio = $precio;
+        $producto->destacado = $destacado;
         $producto->categoria_producto_id = $categoria_producto_id;
     }
 
