@@ -44,6 +44,15 @@ class ProductoController extends Controller
         return response()->json($productos);
     }
 
+    public function obtenerDestacados()
+    {
+        $productos = DB::table('productos')
+            ->where('destacado', 'true')
+            ->get();
+
+        return response()->json($productos);
+    }
+
     public function store(ProductoRequest $request)
     {
         $productos=Producto::create($request->all());
