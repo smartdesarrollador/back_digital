@@ -1,5 +1,6 @@
 <?php
 
+/* 5.- ENVIO-CORREO-V1-P1 */
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
@@ -61,3 +62,5 @@ class ContactoEmail extends Mailable
                     ->with('nombre', $this->nombre);
     } */
 }
+
+/* /5.- ENVIO-CORREO-V1-P1 */

@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+/* 6.- ENVIO-CORREO-V1-P1 */
 use App\Mail\ContactoEmail;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\Response;
-
 use App\Models\Contacto;
+/* /6.- ENVIO-CORREO-V1-P1 */
+use Illuminate\Http\Response;
 
 class ContactoController extends Controller
 {
-
+/* 7.- ENVIO-CORREO-V1-P1 */
      public function index()
     {
         $contactos = Contacto::all();
@@ -77,4 +78,5 @@ $data = [
 
 
     }
+    /* /7.- ENVIO-CORREO-V1-P1 */
 }

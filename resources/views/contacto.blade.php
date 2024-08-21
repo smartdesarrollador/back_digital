@@ -13,7 +13,7 @@
 <p>Asunto: <strong>{{ $data['asunto'] }}</strong> </p>
 <p>Mensaje: {{ $data['mensaje'] }}</p> --}}
 
-
+{{-- 8.- ENVIO-CORREO-V1-P1 --}}
  <div class="container">
         <h1>Confirmación de recepción de mensaje</h1>
         <p>Hola {{ $data['nombre'] }},</p>
@@ -25,5 +25,6 @@
             <p>ONE DIGITAL</p>
         </div>
     </div>
+    {{-- /8.- ENVIO-CORREO-V1-P1 --}}
 </body>
 </html>

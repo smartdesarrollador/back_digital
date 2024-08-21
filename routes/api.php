@@ -19,7 +19,9 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\MisionController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ProductoController;
+ /* 9.- ENVIO-CORREO-V1-P1  */
 use App\Http\Controllers\ContactoController;
+ /* /9.- ENVIO-CORREO-V1-P1  */
 use App\Http\Controllers\TestimonioController;
 use App\Models\Producto;
 
@@ -114,9 +116,11 @@ Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 Route::post('productos/subir', [ProductoController::class, 'file']);
 Route::post('productos/update', [ProductoController::class, 'updateFile']);
 
+/* 10.- ENVIO-CORREO-V1-P1  */
 // Contacto
 Route::get('contactos', [ContactoController::class, 'index']);
 Route::post('contacto',[ContactoController::class,'sendContactForm']);
+/* /10.- ENVIO-CORREO-V1-P1  */
 
 // Crud Testimonio
 Route::get('testimonios', [TestimonioController::class, 'index']);
