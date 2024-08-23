@@ -26,6 +26,8 @@ class ProductoSeeder extends Seeder
             'duracion' => "4 Meses",
             'imagen' => "producto1.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto1.jpg",
+            'pdf' => "pdf_1.pdf",
+            'ruta_pdf' => "assets/pdf/producto/pdf_1.pdf",
             /* 'maestro' => "maestro1", */
             'observacion' => "Ing. John Smith",
             'precio' => "900",
@@ -42,6 +44,8 @@ class ProductoSeeder extends Seeder
             'duracion' => "3 Meses",
             'imagen' => "producto2.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto2.jpg",
+            'pdf' => "pdf_2.pdf",
+            'ruta_pdf' => "assets/pdf/producto/pdf_2.pdf",
             /* 'maestro' => "maestro2", */
             'observacion' => "Ing. Emily Johnson",
             'precio' => "800",
@@ -58,6 +62,8 @@ class ProductoSeeder extends Seeder
             'duracion' => "1 año",
             'imagen' => "producto3.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto3.jpg",
+            'pdf' => "pdf_3.pdf",
+            'ruta_pdf' => "assets/pdf/producto/pdf_3.pdf",
             /* 'maestro' => "maestro1", */
             'observacion' => "Ing. Michael Brown",
             'precio' => "1700",
@@ -74,6 +80,8 @@ class ProductoSeeder extends Seeder
             'duracion' => "1 año",
             'imagen' => "producto4.jpg",
             'ruta_imagen' => "assets/imagen/producto/producto4.jpg",
+            'pdf' => "pdf_4.pdf",
+            'ruta_pdf' => "assets/pdf/producto/pdf_4.pdf",
             /* 'maestro' => "maestro2", */
             'observacion' => "Ing. Sophia Williams",
             'precio' => "1900",
