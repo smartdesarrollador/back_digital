@@ -24,6 +24,7 @@ use App\Http\Controllers\ContactoController;
  /* /9.- ENVIO-CORREO-V1-P1  */
 use App\Http\Controllers\TestimonioController;
 use App\Models\Producto;
+use App\Http\Controllers\EventoController;
 
 use Illuminate\Support\Facades\Mail;
 
@@ -132,5 +133,12 @@ Route::post('testimonios/subir', [TestimonioController::class, 'file']);
 Route::post('testimonios/update', [TestimonioController::class, 'updateFile']);
 
 
-
+// Crud Slider
+Route::get('eventos', [EventoController::class, 'index']);
+Route::post('eventos', [EventoController::class, 'store']);
+Route::get('eventos/{id}', [EventoController::class, 'show']);
+Route::put('eventos/{id}', [EventoController::class, 'update']);
+Route::delete('eventos/{id}', [EventoController::class, 'destroy']);
+Route::post('eventos/subir', [EventoController::class, 'file']);
+Route::post('eventos/update', [EventoController::class, 'updateFile']);
 
