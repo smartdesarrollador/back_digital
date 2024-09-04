@@ -8,4 +8,8 @@ return [
     'url_upload_testimonio' => env('URL_UPLOAD_TESTIMONIO', 'assets/imagen/testimonio'),
     'url_upload_producto_pdf' => env('URL_UPLOAD_PRODUCTO_PDF', 'assets/pdf/producto'),
     'url_upload_evento' => env('URL_UPLOAD_EVENTO', 'assets/imagen/evento'),
+    'url_upload_banner_curso' => env('URL_UPLOAD_BANNER_CURSO', 'assets/imagen/banner/curso'),
+    'url_upload_banner_especialidad' => env('URL_UPLOAD_BANNER_ESPECIALIDAD', 'assets/imagen/banner/especialidad'),
+    'url_upload_banner_contacto' => env('URL_UPLOAD_BANNER_CONTACTO', 'assets/imagen/banner/contacto'),
+    'url_upload_banner_evento' => env('URL_UPLOAD_BANNER_EVENTO', 'assets/imagen/banner/evento'),
 ];

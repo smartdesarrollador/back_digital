@@ -58,6 +58,10 @@ class DatabaseSeeder extends Seeder
             ContactoSeeder::class,
             TestimonioSeeder::class,
             EventoSeeder::class,
+            BannerCursoSeeder::class,
+            BannerContactoSeeder::class,
+            BannerEspecialidadSeeder::class,
+            BannerEventoSeeder::class,
             
         ]);
     }

@@ -26,6 +26,11 @@ use App\Http\Controllers\TestimonioController;
 use App\Models\Producto;
 use App\Http\Controllers\EventoController;
 
+use App\Http\Controllers\BannerCursoController;
+use App\Http\Controllers\BannerEspecialidadController;
+use App\Http\Controllers\BannerContactoController;
+use App\Http\Controllers\BannerEventoController;
+
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -133,7 +138,7 @@ Route::post('testimonios/subir', [TestimonioController::class, 'file']);
 Route::post('testimonios/update', [TestimonioController::class, 'updateFile']);
 
 
-// Crud Slider
+// Crud Eventos
 Route::get('eventos', [EventoController::class, 'index']);
 Route::post('eventos', [EventoController::class, 'store']);
 Route::get('eventos/{id}', [EventoController::class, 'show']);
@@ -141,4 +146,29 @@ Route::put('eventos/{id}', [EventoController::class, 'update']);
 Route::delete('eventos/{id}', [EventoController::class, 'destroy']);
 Route::post('eventos/subir', [EventoController::class, 'file']);
 Route::post('eventos/update', [EventoController::class, 'updateFile']);
+
+/* Banner Curso */
+Route::get('banner_curso', [BannerCursoController::class, 'index']);
+Route::delete('banner_curso/{id}', [BannerCursoController::class, 'destroy']);
+Route::post('banner_curso/subir', [BannerCursoController::class, 'file']);
+Route::post('banner_curso/update', [BannerCursoController::class, 'updateFile']);
+
+/* Banner Especialidad */
+Route::get('banner_especialidad', [BannerEspecialidadController::class, 'index']);
+Route::delete('banner_especialidad/{id}', [BannerEspecialidadController::class, 'destroy']);
+Route::post('banner_especialidad/subir', [BannerEspecialidadController::class, 'file']);
+Route::post('banner_especialidad/update', [BannerEspecialidadController::class, 'updateFile']);
+
+/* Banner Contacto */
+Route::get('banner_contacto', [BannerContactoController::class, 'index']);
+Route::delete('banner_contacto/{id}', [BannerContactoController::class, 'destroy']);
+Route::post('banner_contacto/subir', [BannerContactoController::class, 'file']);
+Route::post('banner_contacto/update', [BannerContactoController::class, 'updateFile']);
+
+/* Banner Evento */
+Route::get('banner_evento', [BannerEventoController::class, 'index']);
+Route::delete('banner_evento/{id}', [BannerEventoController::class, 'destroy']);
+Route::post('banner_evento/subir', [BannerEventoController::class, 'file']);
+Route::post('banner_evento/update', [BannerEventoController::class, 'updateFile']);
+
 
