@@ -98,7 +98,7 @@ class ProductoController extends Controller
             $resumen = $request->input('resumen');
             $descripcion = $request->input('descripcion');
             $duracion = $request->input('duracion');
-            /* $maestro = $request->input('maestro'); */
+            $maestro = $request->input('maestro');
             $observacion = $request->input('observacion');
             $precio = $request->input('precio');
             $destacado = $request->input('destacado');
@@ -125,7 +125,7 @@ class ProductoController extends Controller
             $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
             $producto->pdf = $compPicPdf;
             $producto->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
-            /* $producto->maestro = $maestro; */
+            $producto->maestro = $maestro;
             $producto->observacion = $observacion;
             $producto->precio = $precio;
             $producto->destacado = $destacado;
@@ -145,7 +145,7 @@ class ProductoController extends Controller
     $resumen = $request->input('resumen');
     $descripcion = $request->input('descripcion');
     $duracion = $request->input('duracion');
-    /* $maestro = $request->input('maestro'); */
+    $maestro = $request->input('maestro');
     $observacion = $request->input('observacion');
     $precio = $request->input('precio');
     $destacado = $request->input('destacado');
@@ -178,7 +178,7 @@ class ProductoController extends Controller
         $producto->duracion = $duracion;
         $producto->imagen = $compPic;
         $producto->ruta_imagen = $this->urlAssets.'/'.$compPic;
-        /* $producto->maestro = $maestro; */
+        $producto->maestro = $maestro;
         $producto->observacion = $observacion;
         $producto->precio = $precio;
         $producto->destacado = $destacado;
@@ -202,7 +202,7 @@ class ProductoController extends Controller
         $producto->duracion = $duracion;
         $producto->pdf = $compPicPdf;
         $producto->ruta_pdf = $this->urlAssetsPdf.'/'.$compPicPdf;
-        /* $producto->maestro = $maestro; */
+        $producto->maestro = $maestro;
         $producto->observacion = $observacion;
         $producto->precio = $precio;
         $producto->destacado = $destacado;
@@ -216,7 +216,7 @@ class ProductoController extends Controller
          $producto->resumen = $resumen;
         $producto->descripcion = $descripcion;
         $producto->duracion = $duracion;
-        /* $producto->maestro = $maestro; */
+        $producto->maestro = $maestro;
         $producto->observacion = $observacion;
         $producto->precio = $precio;
         $producto->destacado = $destacado;
