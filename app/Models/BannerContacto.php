@@ -9,7 +9,7 @@ class BannerContacto extends Model
 {
     use HasFactory;
 
-    protected $table = 'banner_Contactos';
+    protected $table = 'banner_contactos';
 
     protected $fillable = ['imagen', 'ruta_imagen'];
 
