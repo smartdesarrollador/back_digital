@@ -12,4 +12,6 @@ return [
     'url_upload_banner_especialidad' => env('URL_UPLOAD_BANNER_ESPECIALIDAD', 'assets/imagen/banner/especialidad'),
     'url_upload_banner_contacto' => env('URL_UPLOAD_BANNER_CONTACTO', 'assets/imagen/banner/contacto'),
     'url_upload_banner_evento' => env('URL_UPLOAD_BANNER_EVENTO', 'assets/imagen/banner/evento'),
+    'url_upload_banner_solucion' => env('URL_UPLOAD_BANNER_SOLUCION', 'assets/imagen/banner/solucion'),
+    'url_upload_solucion' => env('URL_UPLOAD_SOLUCION', 'assets/imagen/solucion'),
 ];

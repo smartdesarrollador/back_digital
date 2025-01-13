@@ -25,12 +25,12 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\TestimonioController;
 use App\Models\Producto;
 use App\Http\Controllers\EventoController;
-
+use App\Http\Controllers\SolucionController;
 use App\Http\Controllers\BannerCursoController;
 use App\Http\Controllers\BannerEspecialidadController;
 use App\Http\Controllers\BannerContactoController;
 use App\Http\Controllers\BannerEventoController;
-
+use App\Http\Controllers\BannerSolucionController;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -147,6 +147,15 @@ Route::delete('eventos/{id}', [EventoController::class, 'destroy']);
 Route::post('eventos/subir', [EventoController::class, 'file']);
 Route::post('eventos/update', [EventoController::class, 'updateFile']);
 
+// Crud Solucion
+Route::get('soluciones', [SolucionController::class, 'index']);
+Route::post('soluciones', [SolucionController::class, 'store']);
+Route::get('soluciones/{id}', [SolucionController::class, 'show']);
+Route::put('soluciones/{id}', [SolucionController::class, 'update']);
+Route::delete('soluciones/{id}', [SolucionController::class, 'destroy']);
+Route::post('soluciones/subir', [SolucionController::class, 'file']);
+Route::post('soluciones/update', [SolucionController::class, 'updateFile']);
+
 /* Banner Curso */
 Route::get('banner_curso', [BannerCursoController::class, 'index']);
 Route::delete('banner_curso/{id}', [BannerCursoController::class, 'destroy']);
@@ -170,5 +179,12 @@ Route::get('banner_evento', [BannerEventoController::class, 'index']);
 Route::delete('banner_evento/{id}', [BannerEventoController::class, 'destroy']);
 Route::post('banner_evento/subir', [BannerEventoController::class, 'file']);
 Route::post('banner_evento/update', [BannerEventoController::class, 'updateFile']);
+
+/* Banner Solucion */
+Route::get('banner_solucion', [BannerSolucionController::class, 'index']);
+Route::delete('banner_solucion/{id}', [BannerSolucionController::class, 'destroy']);
+Route::post('banner_solucion/subir', [BannerSolucionController::class, 'file']);
+Route::post('banner_solucion/update', [BannerSolucionController::class, 'updateFile']);
+
 
 
